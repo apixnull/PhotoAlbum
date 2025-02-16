@@ -1,0 +1,197 @@
+/* One Piece Theme - Pirate Aesthetic */
+.content-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center content */
+    gap: 20px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* Content Container - Pirate Chest Effect */
+.content-container {
+    background: #0d0d0d; /* Dark pirate-like background */
+    border: 3px solid #d4af37; /* Gold border for a treasure-like effect */
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* Ensures 3 items per row */
+    height: 460px; /* Adjusted for better spacing */
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.5); /* Gold glow */
+}
+
+    /* Pirate-Themed Hover Effect */
+    .content-container:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.7); /* Stronger gold glow */
+    }
+
+/* Image Styling - Rugged Border */
+.anime-img {
+    width: 100%;
+    max-width: 300px;
+    height: 240px;
+    border-radius: 5px;
+    border: 3px solid #d4af37; /* Gold border */
+    object-fit: cover;
+    background-color: #111;
+}
+
+/* Title Styling - Pirate Font */
+.anime-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcc00; /* Golden text */
+    text-shadow: 2px 2px 5px rgba(212, 175, 55, 0.7);
+    font-family: 'Pirata One', cursive; /* Pirate-style font */
+}
+
+/* Description Styling */
+.anime-description {
+    font-size: 1.1rem;
+    color: #c9c9c9;
+    min-height: 55px;
+    padding: 0 20px;
+    font-style: italic;
+    flex-grow: 1; /* Allows description to take available space */
+}
+
+/* Read More Button */
+.read-more-btn {
+    background: #d4af37;
+    color: #222;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border: 2px solid #d4af37;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    font-family: 'Pirata One', cursive;
+    width: 100%;
+    max-width: 200px;
+}
+
+    .read-more-btn:hover {
+        background: #222;
+        color: #d4af37;
+        transform: scale(1.1);
+    }
+
+/* Expanded View - Pirate Theme */
+.expanded-view {
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay for pirate mystery */
+}
+
+/* Expanded Content - Treasure Chest Look */
+.expanded-content {
+    background: #0d1b2a; /* Deep navy blue (ocean feel) */
+    border: 3px solid #d4af37; /* Gold border (treasure chest outline) */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); /* Glowing treasure effect */
+}
+
+/* Expanded Image - Golden Frame */
+.expanded-img {
+    border: 3px solid #ffcc00; /* Brighter gold edge */
+    filter: drop-shadow(3px 3px 10px rgba(255, 204, 0, 0.8)); /* Glowing effect */
+}
+
+/* Expanded Title - Pirate Style */
+.expanded-title {
+    color: #ffcc00; /* Bright gold */
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.9); /* Glow effect */
+    font-family: 'Pirata One', cursive; /* Pirate-themed font */
+}
+
+/* Expanded Description - Map-Like Style */
+.expanded-description {
+    color: #e0e0e0; /* Light text for readability */
+    border-left: 3px solid #d4af37; /* Golden left border */
+    padding-left: 10px;
+    font-style: italic;
+}
+
+/* Quotes Section - Pirate Feel */
+.expanded-quote-container {
+    background: #1a1a1a; /* Darker shade for contrast */
+    color: #ffcc00; /* Golden pirate-style text */
+    border: 2px solid #d4af37; /* Gold outline */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.6); /* Treasure glow */
+    padding: 12px;
+}
+
+/* Quote Text - Bigger & More Visible */
+.expanded-quote {
+    font-style: italic;
+    font-size: 1.1rem; /* Slightly larger */
+    font-weight: bold;
+    text-align: center;
+    color: #ffd700; /* Brighter gold */
+    text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.6); /* Glow effect */
+}
+
+/* Next Quote Button - Golden Touch */
+.next-quote-btn {
+    background: #ffcc00; /* Gold button */
+    color: #222;
+    border: 2px solid #d4af37;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: 'Pirata One', cursive;
+    transition: 0.3s;
+}
+
+    .next-quote-btn:hover {
+        background: #222;
+        color: #ffcc00;
+        transform: scale(1.05);
+    }
+
+/* Close Button - One Piece Theme */
+.close-btn {
+    background: #ffcc00; /* Gold */
+    color: #222;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+}
+
+    .close-btn:hover {
+        background: #222;
+        color: #ffcc00;
+    }
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .content-container {
+        width: calc(50% - 20px); /* 2 per row on medium screens */
+        height: 440px;
+    }
+
+    .anime-img {
+        max-width: 280px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-container {
+        width: 100%; /* Full width on small screens */
+        max-width: 360px;
+        height: auto;
+    }
+
+    .anime-img {
+        max-width: 260px;
+        height: 200px;
+    }
+}

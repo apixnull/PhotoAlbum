@@ -1,0 +1,194 @@
+﻿@{
+    ViewData["Title"] = "One Piece";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2 class="sub-head">Some of the Strongest Character in One Piece</h2>
+@{
+    string basePath = "/images/one_piece/"; // Base path for One Piece images
+
+    var animeList = new List<Dictionary<string, string>>
+    {
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "luffy.jpeg" },
+            { "Title", "Monkey D. Luffy" },
+            { "Description", "A fearless pirate with an unbreakable spirit, aiming to become the King of the Pirates." },
+            { "FullDescription", "Monkey D. Luffy is the adventurous and free-spirited captain of the Straw Hat Pirates, known for his boundless optimism and unwavering belief in his friends. After eating the Gum-Gum Fruit, he gained the ability to stretch like rubber, making him a formidable fighter. His dream is to find the legendary One Piece and become the King of the Pirates, a title that to him represents ultimate freedom. Despite his carefree nature, Luffy possesses an indomitable will and a deep sense of justice, challenging corrupt rulers and powerful enemies to protect his crew and allies. His journey is one of growth, adventure, and defying impossible odds." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "zoro.jpeg" },
+            { "Title", "Roronoa Zoro" },
+            { "Description", "A master swordsman and warrior who aims to become the world’s strongest swordsman." },
+            { "FullDescription", "Roronoa Zoro is the first mate of the Straw Hat Pirates and one of the most fearsome swordsmen in the world. He wields a unique three-sword style, combining strength, technique, and unshakable determination. Once a lone swordsman on a quest to fulfill his childhood promise, Zoro joined Luffy’s crew to grow stronger and achieve his dream of surpassing Dracule Mihawk, the world’s strongest swordsman. Though he often appears stoic and serious, his loyalty to his captain and crew is unwavering. With immense discipline and an unyielding warrior’s spirit, Zoro faces every challenge head-on, proving that true strength comes from perseverance." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "sanji.jpg" },
+            { "Title", "Vinsmoke Sanji" },
+            { "Description", "A master chef and skilled fighter who values chivalry, loyalty, and the pursuit of the All Blue." },
+            { "FullDescription", "Sanji, the cook of the Straw Hat Pirates, is a master of the Black Leg fighting style and one of Luffy’s most trusted crewmates. Raised in the Vinsmoke family but rejecting their ruthless ways, he found his true home in the kitchen and at sea. His dream is to discover the legendary All Blue, where all the world’s fish gather. Sanji is known for his unwavering chivalry, refusing to harm women even in battle, and his deep respect for food, ensuring no meal goes to waste. Despite his flirtatious and sometimes hot-tempered personality, Sanji is highly intelligent, resourceful, and willing to sacrifice everything to protect those he cares about." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "ace.jpg" },
+            { "Title", "Portgas D. Ace" },
+            { "Description", "The adopted brother of Luffy and a powerful pirate who carried the will of fire." },
+            { "FullDescription", "Portgas D. Ace, the son of Gol D. Roger, chose to make his own path as a pirate, becoming the commander of Whitebeard’s Second Division. Blessed with the power of the Flame-Flame Fruit, he was a formidable fighter, known for his fiery attacks and strong will. Despite his carefree and confident demeanor, Ace carried deep insecurities about his lineage, questioning whether he deserved to live. His unwavering loyalty to his crew and family ultimately led to his downfall at Marineford, where he sacrificed himself to save Luffy. His death became a defining moment in Luffy’s journey, pushing him to become even stronger." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "shanks.jpeg" },
+            { "Title", "Red-Haired Shanks" },
+            { "Description", "A legendary pirate and one of the Four Emperors, known for his charisma, strength, and belief in freedom." },
+            { "FullDescription", "Shanks, captain of the Red-Haired Pirates, is one of the most influential figures in the world, known for his easygoing nature yet immense power. Once an apprentice of Gol D. Roger, he grew into a feared pirate and eventually became one of the Four Emperors. Unlike many other pirates, Shanks believes in maintaining balance and avoiding unnecessary conflicts, preferring diplomacy over brute force. However, when he does fight, his Haki is unrivaled, allowing him to stand against the strongest opponents. He was also the one who inspired Luffy to set sail, entrusting him with his signature straw hat and the dream of true freedom." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "roger.jpg" },
+            { "Title", "Gol D. Roger" },
+            { "Description", "The Pirate King who conquered the Grand Line and sparked the Great Pirate Era." },
+            { "FullDescription", "Gol D. Roger, captain of the Roger Pirates, was the first and only person to reach the final island, Laugh Tale, and uncover the true history of the world. His charisma, unmatched strength, and fearless spirit made him a legendary figure, inspiring countless pirates to chase after his treasure, the One Piece. Though he was sentenced to execution, he met his fate with a smile, using his final words to ignite the Great Pirate Era. Despite his short time as the Pirate King, his legacy continues to shape the world, with many—including Luffy—striving to follow in his footsteps and uncover the truth he left behind." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "whitebeard.jpeg" },
+            { "Title", "Edward Newgate" },
+            { "Description", "A legendary pirate known as the Strongest Man in the World, who saw his crew as his family." },
+            { "FullDescription", "Edward Newgate, better known as Whitebeard, was one of the most feared and respected pirates in history. As the captain of the Whitebeard Pirates and one of the Four Emperors, he wielded the Tremor-Tremor Fruit, allowing him to create devastating earthquakes. Despite his overwhelming strength, Whitebeard never sought the title of Pirate King, instead valuing the bonds of his crew above all else. He viewed his men as his family and was willing to go to war to protect them. Even in his final moments at Marineford, he stood unshaken, refusing to fall, proving his unbreakable spirit. His last words reinforced the existence of the One Piece, ensuring that the Great Pirate Era would continue." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "dragon.jpg" },
+            { "Title", "Monkey D. Dragon" },
+            { "Description", "The world’s most dangerous revolutionary, leading the fight against the oppressive World Government." },
+            { "FullDescription", "Monkey D. Dragon, the father of Luffy and the leader of the Revolutionary Army, is a mysterious figure feared by the World Government. While much about his past remains unknown, he opposes the tyranny of the Celestial Dragons and seeks to overthrow their rule. His presence alone can inspire revolutions, and he has gathered a powerful army to challenge the established order. Though his connection to Luffy remains distant, his ideals of freedom and change echo in his son’s journey. With his intelligence, leadership, and unknown abilities, Dragon continues to shape the world from the shadows, waiting for the right moment to strike." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "teach.jpeg" },
+            { "Title", "Marshall D. Teach" },
+            { "Description", "A cunning and ruthless pirate who defies fate, aiming to become the most powerful man in the world." },
+            { "FullDescription", "Marshall D. Teach, also known as Blackbeard, is one of the most dangerous and unpredictable pirates in history. Starting as an unknown member of the Whitebeard Pirates, he betrayed and murdered his crewmate to steal the Dark-Dark Fruit, giving him control over darkness and the ability to nullify Devil Fruit powers. His ambition knows no bounds, as he became one of the Four Emperors after taking Whitebeard’s territory and powers. Unlike Luffy, who seeks freedom for all, Teach desires ultimate power, believing in fate and taking every opportunity to climb higher. His mastery of deception, brutal strength, and ability to wield multiple Devil Fruits make him one of the greatest threats to the world." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "big_mom.jpeg" },
+            { "Title", "Charlotte Linlin" },
+            { "Description", "The gluttonous and ruthless ruler of Totto Land, leading a powerful empire of children and sweets." },
+            { "FullDescription", "Charlotte Linlin, better known as Big Mom, is the captain of the Big Mom Pirates and one of the Four Emperors. With the power of the Soul-Soul Fruit, she can steal the lifespan of others and bring objects to life, creating a kingdom ruled by fear and food. Her dream is to create a utopia where all races coexist, but her unpredictable nature and hunger-driven rages make her a terrifying force. Despite her brutal reputation, she values family above all else, though often in a twisted and controlling way. Her strength, resilience, and near-invulnerable body make her one of the most formidable figures in the pirate world." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "kaido.jpeg" },
+            { "Title", "Kaido of the Beasts" },
+            { "Description", "The self-proclaimed strongest creature alive, ruling the seas with an army of powerful warriors." },
+            { "FullDescription", "Kaido, the captain of the Beasts Pirates and an Emperor of the Sea, is a monstrous warrior feared for his near-invulnerability. Possessing the power of the Mythical Zoan Dragon-Dragon Fruit, he can transform into an enormous dragon, raining destruction upon his enemies. He seeks to create a world where only the strong survive, forging an army of Devil Fruit users to wage an endless war. Despite his immense strength, he is plagued by an obsession with death, believing that a grand and glorious demise is the only fitting end for a warrior. His brutal rule over Wano and clashes with the world’s strongest fighters cement his place as one of the most fearsome pirates to ever live." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "buggy.jpeg" },
+            { "Title", "Buggy the Clown" },
+            { "Description", "A comical yet unexpectedly influential pirate who rises to power despite his cowardly nature." },
+            { "FullDescription", "Buggy the Clown, once an apprentice on Gol D. Roger’s crew, is an unpredictable mix of luck, deception, and sheer survival instinct. Despite his clumsy and cowardly personality, he has managed to gain immense notoriety, becoming one of the Seven Warlords of the Sea and later an Emperor of the Sea. Thanks to his Chop-Chop Fruit, he can split his body into pieces, making him immune to slashing attacks. Though he lacks the raw strength of other pirates, his ability to manipulate others and his connections make him a force to be reckoned with. Whether by accident or clever maneuvering, Buggy continues to rise through the ranks of the pirate world." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "rocks.jpg" },
+            { "Title", "Rocks D. Xebec" },
+            { "Description", "A ruthless and ambitious pirate who sought to overthrow the world and rule by chaos." },
+            { "FullDescription", "Rocks D. Xebec was the captain of the infamous Rocks Pirates, a crew composed of future legends like Whitebeard, Kaido, and Big Mom. His ultimate goal was to overthrow the World Government and seize control over everything. Known for his cruelty and chaotic nature, he was one of the most dangerous individuals in history. However, his reign ended at God Valley, where he was defeated by the combined forces of Gol D. Roger and Monkey D. Garp. Though his legacy was erased from history, his influence remains, with many believing that Blackbeard carries on his will. Rocks was a true embodiment of unrelenting ambition and power." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "doffy.jpeg" },
+            { "Title", "Donquixote Doflamingo" },
+            { "Description", "A manipulative and ruthless former Warlord who sought to control the underworld and reshape the world." },
+            { "FullDescription", "Donquixote Doflamingo, the former king of Dressrosa and leader of the Donquixote Pirates, is a cunning and ruthless mastermind. Born into the fallen Celestial Dragon family, he developed a deep hatred for the world after experiencing betrayal and suffering. Possessing the String-String Fruit, he could control razor-sharp threads to manipulate people like puppets. Beyond his strength, he ruled the criminal underworld, controlling the black market and weapons trade. Despite his cruelty, Doflamingo was a complex villain, believing that the world’s corruption justified his actions. His downfall at the hands of Luffy marked the end of an era, but his influence continues to loom over the world." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "mihawk.jpg" },
+            { "Title", "Dracule Mihawk" },
+            { "Description", "The world’s strongest swordsman, a lone warrior who embodies absolute skill and discipline." },
+            { "FullDescription", "Dracule Mihawk, also known as \"Hawk Eyes,\" is the greatest swordsman in the world, wielding the legendary black blade, Yoru. A former Warlord of the Sea, Mihawk is a mysterious and reserved figure who values strength and skill above all else. He once sought worthy opponents, but as the world changed, he became more reclusive. His rivalry with Shanks and his mentorship of Zoro show his deep respect for powerful warriors. Despite his lack of a crew, Mihawk is feared across the seas, standing as the pinnacle of swordsmanship. His enigmatic nature and immense skill make him one of the most respected figures in the pirate world." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "dark_knight.jpg" },
+            { "Title", "Silvers Rayleigh" },
+            { "Description", "The legendary right-hand man of Gol D. Roger, a master of Haki and a guiding force for the next generation." },
+            { "FullDescription", "Silvers Rayleigh, known as the \"Dark King,\" was Gol D. Roger’s first mate and one of the strongest pirates of his time. Despite his retirement, he remains an incredibly powerful and wise figure, capable of overwhelming even the most dangerous foes. As a master of all three forms of Haki, he played a crucial role in training Luffy during the two-year timeskip. Though he no longer seeks adventure, Rayleigh’s past holds many secrets about the true history of the world. His calm demeanor, battle experience, and unmatched skill make him one of the most revered figures in the One Piece universe." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "kid.jpg" },
+            { "Title", "Eustass Captain Kid" },
+            { "Description", "A fearless and ambitious pirate who seeks to challenge the strongest and carve his name into history." },
+            { "FullDescription", "Eustass Kid, captain of the Kid Pirates, is a bold and ruthless pirate known for his brutal fighting style and unyielding ambition. Possessing the Magnet-Magnet Fruit, he can manipulate metal to create devastating weapons and armor. Unlike Luffy, who values freedom and friendship, Kid pursues power with a relentless drive, willing to eliminate any who stand in his way. His rivalry with Luffy and Law has pushed him to grow stronger, especially in his battle against the Yonko. Though reckless and prone to anger, Kid is a force to be reckoned with, proving that he has what it takes to stand among the strongest pirates of the new era." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "law.jpg" },
+            { "Title", "Trafalgar D. Law" },
+            { "Description", "A brilliant and calculating pirate with a tragic past, wielding one of the most powerful Devil Fruits." },
+            { "FullDescription", "Trafalgar Law, captain of the Heart Pirates, is one of the most intelligent and strategic figures in the pirate world. As the user of the Op-Op Fruit, he can manipulate space itself, performing near-surgical attacks and even granting immortality at the cost of his life. Once seeking revenge against Doflamingo for the destruction of his home, Law later became one of Luffy’s key allies in the battle against the Yonko. Though he often appears cold and pragmatic, his loyalty to his crew and allies runs deep. His dream is to uncover the true history of the world, making him a crucial figure in the unfolding story of One Piece." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "five_elders.jpg" },
+            { "Title", "The Five Elders & Imu" },
+            { "Description", "The hidden rulers of the world, shrouded in secrecy and commanding absolute power." },
+            { "FullDescription", "The Five Elders (Gorosei) are the highest-ranking authority within the World Government, enforcing its rule with an iron grip. They control world affairs from the shadows, ensuring that history remains buried and maintaining the dominance of the Celestial Dragons. However, above even them is Imu, a mysterious and seemingly immortal being who sits on the Empty Throne, ruling over the world in secret. Imu’s power and true motives remain unknown, but they have the ability to erase entire nations from history. Together, the Five Elders and Imu are the greatest obstacles to true freedom, manipulating events to ensure their absolute control over the world." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "joyboy.jpg" },
+            { "Title", "Joy Boy" },
+            { "Description", "A legendary figure from the Void Century, whose will is destined to be inherited." },
+            { "FullDescription", "Joy Boy was a mysterious individual who lived over 800 years ago during the Void Century. He played a crucial role in ancient history, forming a bond with the giant sea kings and attempting to fulfill a great promise to the people of Fish-Man Island. Though he ultimately failed, his will has been passed down through generations, waiting for the one who will finally fulfill his destiny. Many believe that Joy Boy’s reincarnation is tied to Luffy, as he has awakened a power that once belonged to him. His legacy is deeply connected to the One Piece, the Void Century, and the true history of the world, making him one of the most significant figures in the grand story of One Piece." }
+        }
+    };
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/one_piece.css" asp-append-version="true" />
+}
+
+<div class="content-block">
+    @foreach (var item in animeList)
+    {
+        <div class="content-container"
+             onclick="expandContent(this)"
+             data-image="@($"{basePath}{item["ImageFile"]}")"
+             data-title="@item["Title"]"
+             data-full-description="@item["FullDescription"]">
+
+            <img src="@($"{basePath}{item["ImageFile"]}")" alt="@item["Title"]" class="anime-img">
+            <h2 class="anime-title">@item["Title"]</h2>
+            <p class="anime-description">@item["Description"]...</p>
+            <button class="read-more-btn" onclick="expandContent(this.parentElement); event.stopPropagation();">Read More</button>
+        </div>
+    }
+</div>
+
+<!-- Expanded View Container -->
+<div id="expanded-view" class="expanded-view" onclick="closeExpanded(event)">
+    <div class="expanded-content">
+        <span class="close-btn" onclick="closeExpanded(event)">✖</span>
+        <img id="expanded-img" class="expanded-img" src="" alt="">
+        <h2 id="expanded-title" class="expanded-title"></h2>
+        <p id="expanded-description" class="expanded-description"></p>
+
+        <!-- Quotes Section -->
+        <div class="expanded-quote-container">
+            <p id="expanded-quote" class="expanded-quote"></p>
+        </div>
+
+        <!-- Next Quote Button -->
+        <div class="quote-btn-container">
+            <button class="next-quote-btn" onclick="nextQuote()">Next Quote</button>
+        </div>
+    </div>
+</div>

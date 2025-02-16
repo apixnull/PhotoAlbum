@@ -1,0 +1,178 @@
+/* Demon Slayer Theme - Blood Moon & Mist Aesthetic */
+.content-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Content Container - Dark Misty Look */
+.content-container {
+    background: #1b1b1b; /* Darker, night-themed background */
+    border: 3px solid #8b0000; /* Blood-red border (demon hunter aesthetic) */
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(33.33% - 20px); /* Ensures 3 items per row */
+    max-width: 400px;
+    height: 460px;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.6); /* Crimson glow effect */
+}
+
+    /* Hover Effect - Demon Aura */
+    .content-container:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 25px rgba(139, 0, 0, 1); /* Deep red glow */
+        border-color: #ff4444; /* Brighter on hover */
+    }
+
+/* Image Styling */
+.anime-img {
+    width: 100%;
+    max-width: 320px;
+    height: 240px;
+    border-radius: 5px;
+    border: 3px solid #8b0000; /* Blood-red trim */
+    object-fit: cover;
+    background-color: #000;
+}
+
+/* Title Styling - Bold & Haunting */
+.anime-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff4444; /* Deep red like Nichirin Blades */
+    text-shadow: 2px 2px 8px rgba(255, 68, 68, 0.9);
+    font-family: 'Noto Serif JP', serif; /* Traditional, elegant font */
+}
+
+/* Description Styling */
+.anime-description {
+    font-size: 1.1rem;
+    color: #d9d9d9;
+    min-height: 55px;
+    padding: 0 20px;
+    font-style: italic;
+}
+
+/* Read More Button */
+.read-more-btn {
+    background: #8b0000;
+    color: #f0e0e0;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border: 2px solid #8b0000;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+    .read-more-btn:hover {
+        background: #222;
+        color: #ff4444;
+        transform: scale(1.1);
+    }
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .content-container {
+        flex: 1 1 calc(50% - 20px); /* 2 per row */
+        max-width: 480px;
+        height: 420px;
+    }
+
+    .anime-img {
+        max-width: 280px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-container {
+        flex: 1 1 100%; /* Full width */
+        max-width: 360px;
+        height: auto;
+    }
+
+    .anime-img {
+        max-width: 260px;
+        height: 200px;
+    }
+}
+
+/* Expanded View - Misty Night Effect */
+.expanded-view {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Expanded Content - Dark Elegance */
+.expanded-content {
+    background: #1e1e1e;
+    border: 3px solid #8b0000;
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.7);
+}
+
+/* Expanded Title */
+.expanded-title {
+    color: #ff4444;
+    text-shadow: 2px 2px 10px rgba(255, 68, 68, 1);
+}
+
+/* Expanded Description */
+.expanded-description {
+    color: #c9a99d; /* Aged parchment look */
+    border-left: 3px solid #8b0000;
+    padding-left: 10px;
+}
+
+/* Quotes Section */
+.expanded-quote-container {
+    background: #292929;
+    color: #ff4444;
+    border: 2px solid #8b0000;
+    padding: 12px;
+}
+
+.expanded-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ff8888;
+}
+
+/* Next Quote Button */
+.next-quote-btn {
+    background: #8b0000;
+    color: #f0e0e0;
+}
+
+    .next-quote-btn:hover {
+        background: #222;
+        color: #ff4444;
+    }
+
+/* Close Button - Blood Moon Style */
+.close-btn {
+    background: #8b0000;
+    color: #f0e0e0;
+    border: 2px solid #ff4444;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.7);
+}
+
+    .close-btn:hover {
+        background: #222;
+        color: #ff4444;
+    }

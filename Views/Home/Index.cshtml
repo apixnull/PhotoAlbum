@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+}
+
+
+<div class="home-container">
+    <h1 class="home-title">Welcome to My Photo Album</h1>
+    <p class="home-description">Explore the world of your favorite anime with detailed character profiles and stunning visuals.</p>
+
+    <div class="anime-block naruto" onclick="window.location.href='@Url.Action("Naruto", "Home")'">
+        <div class="anime-content">
+            <h2 class="anime-name">Naruto</h2>
+            <p class="anime-description">Follow Naruto Uzumaki's journey to become the Hokage and protect the ninja world.</p>
+        </div>
+    </div>
+
+    <div class="anime-block one-piece" onclick="window.location.href='@Url.Action("One_Piece", "Home")'">
+        <div class="anime-content">
+            <h2 class="anime-name">One Piece</h2>
+            <p class="anime-description">Join Luffy and his crew on their adventure to find the legendary One Piece.</p>
+        </div>
+    </div>
+
+    <div class="anime-block bleach" onclick="window.location.href='@Url.Action("Bleach", "Home")'">
+        <div class="anime-content">
+            <h2 class="anime-name">Bleach</h2>
+            <p class="anime-description">Ichigo Kurosaki battles powerful enemies as he protects both the living and the dead.</p>
+        </div>
+    </div>
+
+    <div class="anime-block hunter" onclick="window.location.href='@Url.Action("Hunter", "Home")'">
+        <div class="anime-content">
+            <h2 class="anime-name">Hunter X Hunter</h2>
+            <p class="anime-description">Gon Freecss sets out to become a Hunter and find his father, uncovering powerful allies and enemies.</p>
+        </div>
+    </div>
+
+    <div class="anime-block demon-slayer" onclick="window.location.href='@Url.Action("Demon_Slayer", "Home")'">
+        <div class="anime-content">
+            <h2 class="anime-name">Demon Slayer</h2>
+            <p class="anime-description">Tanjiro Kamado fights demons to avenge his family and save his sister Nezuko.</p>
+        </div>
+    </div>
+</div>

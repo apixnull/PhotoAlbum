@@ -1,0 +1,108 @@
+/* Home Page Styling */
+.home-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.home-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.8);
+}
+
+.home-description {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+/* Anime Content Block - Full Width */
+.anime-block {
+    position: relative;
+    width: 80%; /* Bigger content */
+    height: 300px; /* Adjusted height */
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+    /* Anime Background */
+    .anime-block::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.6); /* Darkens the background for readability */
+        transition: 0.3s ease-in-out;
+    }
+
+    /* Hover Effect */
+    .anime-block:hover::before {
+        filter: brightness(0.9);
+    }
+
+/* Anime Text Content */
+.anime-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.anime-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.anime-description {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Different Backgrounds for Each Anime */
+.naruto::before {
+    background-image: url('/images/index_images/naruto_bg.jpg');
+}
+
+.one-piece::before {
+    background-image: url('/images/index_images/one_piece_bg.jpg');
+}
+
+.bleach::before {
+    background-image: url('/images/index_images/bleach_bg.jpg');
+}
+
+.hunter::before {
+    background-image: url('/images/index_images/hunter_bg.jpg');
+}
+
+.demon-slayer::before {
+    background-image: url('/images/index_images/demon_slayer_bg.jpg');
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .anime-block {
+        width: 95%;
+        height: 250px;
+    }
+
+    .anime-name {
+        font-size: 1.8rem;
+    }
+
+    .anime-description {
+        font-size: 1rem;
+    }
+}

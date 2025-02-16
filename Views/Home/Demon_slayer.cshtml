@@ -1,0 +1,194 @@
+﻿@{
+    ViewData["Title"] = "Demon Slayer";
+}
+<h1>@ViewData["Title"]</h1>
+<h2 class="sub-head">Some of the Strongest Character in Demon Slayer</h2>
+@{
+    string basePath = "/images/demon_slayer/"; // Base path for Demon Slayer images
+
+    var animeList = new List<Dictionary<string, string>>
+    {
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "tanjiro.jpg" },
+            { "Title", "Tanjiro Kamado" },
+            { "Description", "A kind-hearted Demon Slayer determined to avenge his family and cure his demon-turned sister, Nezuko." },
+            { "FullDescription", "Tanjiro Kamado is the protagonist of Demon Slayer: Kimetsu no Yaiba, known for his unwavering determination and compassion. After his family is slaughtered by demons and his sister Nezuko is turned into one, he embarks on a journey to become a Demon Slayer. With a strong sense of justice and a relentless work ethic, Tanjiro quickly masters the Water Breathing technique before unlocking the powerful Sun Breathing style, the original and strongest form of breathing techniques. His keen sense of smell allows him to detect emotions and weaknesses in battle. Despite his tragic past, he remains kind, even showing empathy toward demons, believing in redemption rather than pure vengeance." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "nezuko.jpg" },
+            { "Title", "Nezuko Kamado" },
+            { "Description", "A demon with an unbreakable bond to her brother, resisting her instincts while protecting humanity." },
+            { "FullDescription", "Nezuko Kamado is Tanjiro’s younger sister who was transformed into a demon but retains her human emotions. Unlike other demons, she refuses to consume human flesh and instead survives by sleeping for extended periods. Her unique Blood Demon Art, Exploding Blood, allows her to set enemies ablaze with pink demonic flames, which are particularly effective against other demons. Over time, she gains the ability to shrink or enlarge her body at will, making her an unpredictable fighter. Despite her monstrous form, Nezuko’s gentle heart remains intact, proving that demons are not inherently evil. Her bond with Tanjiro is the emotional core of the series." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "inosuke.jpg" },
+            { "Title", "Inosuke Hashibira" },
+            { "Description", "A wild and aggressive Demon Slayer raised by boars, known for his beast-like combat style." },
+            { "FullDescription", " Inosuke Hashibira is a hot-headed and prideful warrior who wears a boar’s head mask and prefers to fight using instinct rather than strategy. Having grown up in the mountains among wild animals, he developed extreme flexibility, acute senses, and unparalleled raw strength. His unique Beast Breathing style is self-taught, allowing him to fight with unpredictable and animalistic movements. Though initially confrontational, Inosuke gradually learns teamwork and comes to see Tanjiro and Zenitsu as his closest friends. Despite his rough exterior, he has a deep sense of loyalty and care for his comrades." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "zenitsu.jpg" },
+            { "Title", "Zenitsu Agatsuma" },
+            { "Description", "A cowardly but talented Demon Slayer who becomes incredibly powerful when unconscious." },
+            { "FullDescription", "Zenitsu Agatsuma is a Demon Slayer with a crippling fear of combat, often panicking and doubting his abilities. However, when he is unconscious or asleep, he becomes a lightning-fast warrior capable of taking down powerful demons in an instant. His Thunder Breathing technique specializes in high-speed attacks, with his First Form: Thunderclap and Flash being his signature move. Over time, he develops his own unique Seventh Form, proving that he is far more capable than he believes. Despite his cowardice, he is deeply loyal to his friends, especially Nezuko, whom he has a crush on. His comedic personality adds humor to the group, balancing the darker themes of the series." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "tomioka.jpg" },
+            { "Title", "Giyu Tomioka" },
+            { "Description", "The stoic and powerful Water Hashira who first recognizes Tanjiro’s potential." },
+            { "FullDescription", "Giyu Tomioka is the Water Hashira of the Demon Slayer Corps, known for his emotionless demeanor and immense strength. He is the first Demon Slayer to encounter Tanjiro and Nezuko, choosing to spare them when he realizes Nezuko resists her demon instincts. Despite his quiet nature, Giyu possesses immense skill in combat, effortlessly defeating high-ranking demons with his Water Breathing Eleventh Form: Dead Calm, which neutralizes attacks with perfect precision. He carries a deep sense of survivor’s guilt, believing he is unworthy of his title. However, his strength and composure make him one of the most respected Hashira in the series." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "gyomei.jpg" },
+            { "Title", "Gyomei Himejima" },
+            { "Description", "The strongest Hashira, a blind yet incredibly powerful warrior who wields a massive flail and axe." },
+            { "FullDescription", "Gyomei Himejima is the Stone Hashira and the most powerful member of the Demon Slayer Corps. Despite being blind, his heightened senses and immense physical strength make him an unstoppable force. His Stone Breathing technique allows him to unleash devastating attacks using his chained axe and flail, making his combat style unique among the Hashira. Gyomei's strict and disciplined nature stems from a tragic past, where he lost the children under his care to a demon attack. His unwavering faith and unmatched power make him a pillar of strength for the entire Corps." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "iguro.jpg" },
+            { "Title", "Obanai Iguro" },
+            { "Description", "The Snake Hashira, a cold and calculating swordsman who fights with a slithering blade technique." },
+            { "FullDescription", "Obanai Iguro is the Snake Hashira, known for his mysterious demeanor and deadly precision. His Serpent Breathing mimics the unpredictable movements of a snake, allowing him to strike from unexpected angles. Despite his reserved nature, he is fiercely loyal to the Demon Slayer Corps and holds a deep affection for Mitsuri Kanroji, though he struggles to express his emotions. His tragic past, being born into a corrupt family that worshipped a demon, fuels his hatred for demons and his relentless pursuit of their eradication." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "kanroji.jpg" },
+            { "Title", "Mitsuri Kanroji" },
+            { "Description", "The Love Hashira, a cheerful and powerful warrior with superhuman flexibility and strength." },
+            { "FullDescription", "Mitsuri Kanroji is the Love Hashira, known for her kindhearted personality and incredible combat abilities. Her Love Breathing utilizes her extreme flexibility and enhanced muscle density, allowing her to wield a whip-like Nichirin sword with extraordinary speed. Despite her bubbly nature, she is a fierce fighter capable of taking on Upper-Rank demons. She joined the Demon Slayer Corps to find a man stronger than herself, but over time, her dedication to protecting humanity became her true motivation." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "rengoku.jpg" },
+            { "Title", "Kyojuro Rengoku" },
+            { "Description", "The Flame Hashira, a passionate and noble warrior who embodies the spirit of a true hero." },
+            { "FullDescription", "Kyojuro Rengoku is the Flame Hashira, known for his burning determination and infectious enthusiasm. His Flame Breathing technique is both powerful and elegant, capable of delivering devastating blows with intense heat. Rengoku is deeply dedicated to his duty and believes in protecting the weak at all costs. His battle against Akaza, Upper Rank Three, showcases his unbreakable spirit, as he fights to the very end despite being mortally wounded. His sacrifice leaves a lasting impact on Tanjiro and his friends, inspiring them to push forward in their journey." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "sanemi.jpg" },
+            { "Title", "Sanemi Shinazugawa" },
+            { "Description", "The Wind Hashira, a brutal and battle-hardened warrior with immense strength and speed." },
+            { "FullDescription", "Sanemi Shinazugawa is the Wind Hashira, known for his aggressive and ruthless combat style. His Wind Breathing unleashes high-speed, slicing attacks that overwhelm his enemies. His body is covered in scars, a testament to his countless battles against demons. Despite his harsh demeanor, Sanemi deeply cares for his younger brother, Genya, though their relationship is strained. His hatred for demons stems from his tragic past, where his mother turned into a demon and slaughtered his siblings. His relentless drive to eradicate demons makes him one of the strongest Hashira." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "shinobu.jpg" },
+            { "Title", "Shinobu Kocho" },
+            { "Description", "The Insect Hashira, a graceful yet deadly warrior who uses poison instead of brute strength." },
+            { "FullDescription", "Shinobu Kocho is the Insect Hashira, known for her elegant and deceptive fighting style. Unlike other Hashira, she lacks the physical strength to decapitate demons, so she relies on her mastery of poison-based techniques. Her Insect Breathing delivers rapid, precise strikes laced with a lethal poison derived from wisteria flowers. Beneath her calm and smiling exterior lies a deep-seated hatred for demons, fueled by the loss of her older sister. She plays a key role in developing antidotes and strategies against powerful demons, proving that intellect can be just as deadly as raw power." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "tengen.jpg" },
+            { "Title", "Tengen Uzui" },
+            { "Description", " The flamboyant Sound Hashira, a former ninja with explosive combat skills and enhanced hearing." },
+            { "FullDescription", "Tengen Uzui is the Sound Hashira, known for his extravagant personality and unparalleled combat reflexes. A former shinobi, he combines his Sound Breathing with enhanced physical abilities, using dual Nichirin cleavers connected by a chain to unleash devastating attacks. His unique Explosive Beads further enhance his offensive capabilities. Despite his flashy persona, Tengen is deeply caring, especially towards his three wives, whom he protects with his life. During the Entertainment District Arc, he battles Upper Moon Six, Gyutaro and Daki, displaying his remarkable endurance and combat strategy. Though he retires from active duty due to injuries, his legacy as a warrior remains." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "tokito.jpg" },
+            { "Title", "Muichiro Tokito" },
+            { "Description", " The young yet incredibly talented Mist Hashira, a prodigy who mastered swordsmanship in just months." },
+            { "FullDescription", "Muichiro Tokito is the Mist Hashira, a child prodigy with an extraordinary ability to learn and adapt in battle. Despite his aloof and absent-minded personality, he is a fierce warrior, capable of overwhelming demons with his Mist Breathing, which creates unpredictable movements that confuse opponents. Over time, he regains his lost memories and unlocks the legendary Demon Slayer Mark, significantly boosting his abilities. He plays a key role in the battle against Upper Moon One, Kokushibo, proving that his talent and determination make him one of the strongest Demon Slayers in history." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "upper_1.jpg" },
+            { "Title", "Kokushibo (↑ ☾ 1)" },
+            { "Description", "The strongest Upper Moon, a former Demon Slayer who became a demon to extend his power." },
+            { "FullDescription", "Kokushibo, originally known as Michikatsu Tsugikuni, is the Upper Moon One and the most powerful demon under Muzan’s command. He was once a human and the twin brother of Yoriichi Tsugikuni, the creator of Sun Breathing. Unable to match his brother’s strength, he succumbed to his fear of mortality and accepted Muzan’s offer to become a demon. As a result, he developed Moon Breathing, a technique infused with his demonic abilities, making him nearly unstoppable. His six eyes allow him to predict enemy movements, and his ability to regenerate rapidly makes him a terrifying opponent. Even among the Upper Moons, he is feared for his overwhelming power." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "upper_2.jpg" },
+            { "Title", "Doma (↑ ☾ 2)" },
+            { "Description", "  A sadistic and charismatic demon with a twisted sense of morality, wielding deadly ice-based techniques." },
+            { "FullDescription", "Doma is the Upper Moon Two, a cult leader who uses his charm to lure in followers before consuming them. Unlike other demons, he lacks emotions and sees humans as insignificant, treating their suffering with cold indifference. His Cryokinesis allows him to generate ice-based attacks, freezing enemies and poisoning them with his deadly breath. Despite his playful demeanor, he is one of the most ruthless demons, responsible for the deaths of Shinobu’s sister and countless others. His arrogance ultimately leads to his downfall at the hands of Kanao and Inosuke, who exploit his overconfidence and lack of true emotional understanding." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "upper_3.jpg" },
+            { "Title", "Akaza (↑ ☾ 3)" },
+            { "Description", " A fearsome martial artist who values strength above all, wielding devastating hand-to-hand combat skills." },
+            { "FullDescription", "Akaza is the Upper Moon Three, a demon obsessed with battle and proving his superiority. Unlike other demons, he despises weak individuals and refuses to kill women. His Destructive Death fighting style combines raw strength with deadly precision, allowing him to take on even the strongest Hashira with ease. Despite his monstrous nature, Akaza retains memories of his tragic past, where he fought to protect his loved ones. His battle with Rengoku is one of the most iconic moments in Demon Slayer, showcasing his immense power and the unwavering spirit of the Flame Hashira." }
+        },
+           new Dictionary<string, string>
+        {
+            { "ImageFile", "upper_4.jpg" },
+            { "Title", "Hantengu (↑ ☾ 4)" },
+            { "Description", "A cowardly yet deadly demon who splits into powerful clones, each with unique abilities." },
+            { "FullDescription", "Hantengu is the Upper Moon Four, known for his deceptive nature and ability to divide into multiple emotional clones, each representing a different aspect of his personality. His clones—Joy, Anger, Sorrow, and Pleasure—each possess unique abilities, making him an unpredictable and dangerous foe. His true form, Zohakuten, manifests as a child-like demon wielding immense power. Hantengu's unique regenerative abilities make him difficult to kill, requiring extreme effort from Tanjiro and his allies to finally put him down." }
+        },
+           new Dictionary<string, string>
+        {
+            { "ImageFile", "upper_5.jpg" },
+            { "Title", "GokuGyokko (↑ ☾ 5)" },
+            { "Description", "A grotesque and vain demon with the ability to manipulate water and summon deadly aquatic creatures." },
+            { "FullDescription", "Gyokko is the Upper Moon Five, a demon obsessed with art and self-perceived beauty. His abilities allow him to manipulate water to create deadly fish-like demons and warp between ceramic vases, making him extremely elusive in battle. His arrogance and overconfidence often blind him to danger, leading to his downfall against Muichiro Tokito. Despite his grotesque appearance, he views himself as an artist, creating \"masterpieces\" out of his victims." }
+        },
+           new Dictionary<string, string>
+        {
+            { "ImageFile", "upper_6.jpg" },
+            { "Title", "Gyutaro & Daki (↑ ☾ 6)" },
+            { "Description", "A deadly sibling duo who share the title of Upper Moon Six, combining speed and raw power." },
+            { "FullDescription", "Gyutaro and Daki are two demons who function as one, with Gyutaro hiding within Daki's body until needed. Daki possesses incredible speed and uses razor-sharp Obi Sashes to attack from long distances, while Gyutaro is a brutal close-combat fighter wielding poisoned Blood Sickles. Their ability to share life energy makes them difficult to defeat, as both must be decapitated simultaneously. Their tragic backstory, revealing their struggles as impoverished siblings, adds depth to their villainous nature. Despite their monstrous actions, their bond as siblings remains unbroken, even in death." }
+        },
+           new Dictionary<string, string>
+        {
+            { "ImageFile", "muzan.jpg" },
+            { "Title", "Muzan Kibutsuji" },
+            { "Description", "The Demon King and the first of his kind, possessing near-immortality and overwhelming power." },
+            { "FullDescription", "Muzan Kibutsuji is the progenitor of all demons and the main antagonist of Demon Slayer: Kimetsu no Yaiba. With an unmatched intellect and ruthlessness, he has spent centuries seeking the perfect body to overcome his only weakness—sunlight. His Biokinesis allows him to alter his appearance, regenerate instantly, and create powerful demons with his blood. Muzan’s overwhelming strength, speed, and vast knowledge of demon physiology make him nearly invincible. He sees humans as insignificant and eliminates anyone who dares oppose him. Despite his immense power, his paranoia and fear of death lead to his downfall, as the Demon Slayer Corps and their allies unite to bring an end to his reign of terror." }
+        }
+
+    };
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/demon_slayer.css" asp-append-version="true" />
+}
+
+<div class="content-block">
+    @foreach (var item in animeList)
+    {
+        <div class="content-container"
+             onclick="expandContent(this)"
+             data-image="@($"{basePath}{item["ImageFile"]}")"
+             data-title="@item["Title"]"
+             data-full-description="@item["FullDescription"]">
+
+            <img src="@($"{basePath}{item["ImageFile"]}")" alt="@item["Title"]" class="anime-img">
+            <h2 class="anime-title">@item["Title"]</h2>
+            <p class="anime-description">@item["Description"]...</p>
+            <button class="read-more-btn" onclick="expandContent(this.parentElement); event.stopPropagation();">Read More</button>
+        </div>
+    }
+</div>
+
+<!-- Expanded View Container -->
+<div id="expanded-view" class="expanded-view" onclick="closeExpanded(event)">
+    <div class="expanded-content">
+        <span class="close-btn" onclick="closeExpanded(event)">✖</span>
+        <img id="expanded-img" class="expanded-img" src="" alt="">
+        <h2 id="expanded-title" class="expanded-title"></h2>
+        <p id="expanded-description" class="expanded-description"></p>
+
+        <!-- Quotes Section -->
+        <div class="expanded-quote-container">
+            <p id="expanded-quote" class="expanded-quote"></p>
+        </div>
+
+        <!-- Next Quote Button -->
+        <div class="quote-btn-container">
+            <button class="next-quote-btn" onclick="nextQuote()">Next Quote</button>
+        </div>
+    </div>
+</div>

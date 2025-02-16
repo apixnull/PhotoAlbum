@@ -1,0 +1,338 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* General Background - Modern Photo Album Theme */
+body {
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #1a1a1a, #2b2b2b); /* Dark, sleek, modern */
+    color: #eeeeee; /* Light text for contrast */
+    font-family: 'Lora', serif;
+}
+
+h1 {
+    text-align: center;
+}
+/* Navigation Bar - Dark Modern Theme */
+.navbar {
+    background: #2b2b2b; /* Deep dark gray for contrast */
+    border-bottom: 3px solid #ff5733; /* Vibrant orange accent */
+    box-shadow: 0 4px 10px rgba(255, 87, 51, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 1000;
+    position: sticky;
+}
+/* Prevent Content from Being Hidden Under the Navbar */
+body {
+    padding-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Custom Sticky Navbar */
+.custom-navbar {
+    background: #2b2b2b; /* Dark modern background */
+    border-bottom: 3px solid #ff5733; /* Vibrant orange accent */
+    box-shadow: 0 4px 10px rgba(255, 87, 51, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    position: fixed; /* Ensures navbar stays at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; /* Ensures it stays above everything else */
+}
+
+/* Fix Bootstrap Collapse Menu on Mobile */
+@media (max-width: 991px) {
+    .custom-navbar .navbar-collapse {
+        background: #2b2b2b; /* Match the navbar color */
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+    }
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white; /* Bright orange highlight */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s ease-in-out;
+    font-family: 'Lora', serif;
+}
+
+    .navbar-brand:hover {
+        color: #ffd700 !important; /* Golden hover effect */
+        transform: scale(1.05);
+    }
+
+/* Navbar Links */
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .navbar-nav .nav-link {
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px 15px;
+        transition: 0.3s ease-in-out;
+        font-weight: 500;
+        font-family: 'Lora', serif;
+    }
+
+    /* Active Page Styling */
+    .navbar-nav .active-page {
+        background-color: #ffcc00; /* Highlight color */
+        color: black !important;
+        font-weight: bold;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+    }
+
+    /* Hover effect for all links */
+    .navbar-nav .nav-link:hover {
+        color: #ffd700 !important; /* Golden hover effect */
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        transform: scale(1.1);
+    }
+/* Navbar Toggle */
+.navbar-toggler {
+    border: 2px solid #ff5733;
+    background: rgba(255, 87, 51, 0.2);
+    transition: 0.3s;
+    z-index: 1001;
+}
+
+    .navbar-toggler:hover {
+        background: rgba(255, 87, 51, 0.4);
+    }
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-nav {
+        background: #2b2b2b; /* Keep the dark theme */
+        padding: 10px;
+        border-radius: 5px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        display: flex;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Expanded View Container */
+.expanded-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    padding: 20px;
+}
+
+    .expanded-view.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+/* Expanded Content */
+.expanded-content {
+    width: 650px;
+    height: 580px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Expanded Image */
+.expanded-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #333;
+}
+
+/* Expanded Title */
+.expanded-title {
+    font-size: 1.5rem;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Expanded Description */
+.expanded-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    max-height: 190px;
+    overflow-y: auto;
+    padding: 5px 10px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Quotes Section */
+.expanded-quote-container {
+    background: #f4f4f4;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expanded-quote {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #333;
+    max-width: 90%;
+    text-align: center;
+}
+
+/* Next Quote Button */
+.quote-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.next-quote-btn {
+    background: #007bff;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 130px;
+}
+
+    .next-quote-btn:hover {
+        background: #0056b3;
+    }
+
+/* Close Button - Round Shape */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    transition: 0.3s ease-in-out;
+    z-index: 1001;
+}
+
+    .close-btn:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+/* Custom scrollbar */
+.expanded-description::-webkit-scrollbar {
+    width: 6px;
+}
+
+.expanded-description::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 5px;
+}
+
+.expanded-description::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .expanded-content {
+        width: 90%;
+        max-width: 95%;
+        height: auto;
+    }
+
+    .expanded-img {
+        max-height: 200px;
+    }
+
+    .expanded-description {
+        max-height: 160px;
+    }
+
+    .expanded-quote-container {
+        min-height: 40px;
+    }
+}

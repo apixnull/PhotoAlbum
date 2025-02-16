@@ -1,0 +1,165 @@
+/* Bleach Theme - Dark Soul Reaper Aesthetic */
+.content-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Content Container - Shinigami Theme */
+.content-container {
+    background: #101010; /* Deep black, like a Shinigami uniform */
+    border: 3px solid #ff4500; /* Fiery orange (Hollow/Reiatsu aura) */
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(33.33% - 20px); /* Ensures 3 items per row */
+    max-width: 400px;
+    height: 460px;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.5);
+}
+
+    /* Hover Effect - Reiatsu Glow */
+    .content-container:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(255, 69, 0, 0.8);
+        border-color: #ff6600;
+    }
+
+/* Image Styling - Shinigami Feel */
+.anime-img {
+    width: 100%;
+    max-width: 320px;
+    height: 240px;
+    border-radius: 5px;
+    border: 3px solid #ff4500;
+    object-fit: cover;
+    background-color: #000;
+}
+
+/* Title Styling - Bold and Fierce */
+.anime-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(255, 69, 0, 0.7);
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/* Description Styling */
+.anime-description {
+    font-size: 1.1rem;
+    color: #c9c9c9;
+    min-height: 55px;
+    padding: 0 20px;
+    font-style: italic;
+}
+
+/* Read More Button - Intense Energy */
+.read-more-btn {
+    background: #ff4500;
+    color: #000;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border: 2px solid #ff6600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+    .read-more-btn:hover {
+        background: #000;
+        color: #ff4500;
+        transform: scale(1.1);
+    }
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .content-container {
+        flex: 1 1 calc(50% - 20px); /* 2 per row */
+        max-width: 480px;
+        height: 420px;
+    }
+
+    .anime-img {
+        max-width: 280px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-container {
+        flex: 1 1 100%; /* Full width */
+        max-width: 360px;
+        height: auto;
+    }
+
+    .anime-img {
+        max-width: 260px;
+        height: 200px;
+    }
+}
+
+/* Expanded View - Dark Hollow Theme */
+.expanded-view {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Expanded Content - Reiatsu Glow */
+.expanded-content {
+    background: #151515;
+    border: 3px solid #ff4500;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+}
+
+/* Expanded Title */
+.expanded-title {
+    color: #ff4500;
+    text-shadow: 2px 2px 10px rgba(255, 69, 0, 0.9);
+}
+
+/* Expanded Description */
+.expanded-description {
+    color: #e0e0e0;
+    border-left: 3px solid #ff4500;
+    padding-left: 10px;
+}
+
+/* Quotes Section */
+.expanded-quote-container {
+    background: #252525;
+    color: #ff4500;
+    border: 2px solid #ff6600;
+    padding: 12px;
+}
+
+.expanded-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ff6347;
+}
+
+/* Next Quote Button */
+.next-quote-btn {
+    background: #ff4500;
+    color: #000;
+}
+
+    .next-quote-btn:hover {
+        background: #000;
+        color: #ff4500;
+    }

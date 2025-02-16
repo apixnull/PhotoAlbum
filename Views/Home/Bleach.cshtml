@@ -1,0 +1,194 @@
+﻿@{
+    ViewData["Title"] = "Bleach";
+}
+<h1>@ViewData["Title"]</h1>
+<h2 class="sub-head" >Some of the Strongest Character in Bleach</h2>
+@{
+    string basePath = "/images/bleach/"; // Base path for Bleach images
+
+    var animeList = new List<Dictionary<string, string>>
+    {
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "ichigo.jpg" },
+            { "Title", "Ichigo Kurosaki" },
+            { "Description", "A Substitute Soul Reaper with immense spiritual power, capable of wielding multiple transformations." },
+            { "FullDescription", "Ichigo Kurosaki is the protagonist of Bleach, a human with Soul Reaper abilities who becomes one of the most powerful warriors in existence. Born with a unique lineage that combines human, Soul Reaper, Quincy, and Hollow traits, Ichigo’s potential is limitless. He wields Zangetsu, a massive Zanpakuto, and unlocks multiple powerful forms, including Bankai, Hollowfication, and Final Getsuga Tensho. His True Bankai and Quincy abilities further elevate his strength, allowing him to stand against god-like enemies. Despite his immense power, Ichigo remains humble and fights to protect his loved ones, embodying the true spirit of a hero." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "aizen.jpg" },
+            { "Title", "Sosuke Aizen" },
+            { "Description", "A cunning and nearly omnipotent former Soul Reaper Captain who sought godhood." },
+            { "FullDescription", "Sosuke Aizen is one of the most intelligent and manipulative villains in Bleach. Once a respected Soul Reaper Captain, he betrayed the Soul Society in pursuit of ultimate power. His Zanpakuto, Kyoka Suigetsu, grants absolute hypnosis, allowing him to manipulate the perceptions of anyone who sees its release. Through the Hogyoku, he transcended the limits of a Soul Reaper, gaining near-immortality and overwhelming strength. Even after his defeat, his intelligence and power make him one of the most formidable beings in the Bleach universe, with many believing that he is still a threat despite being imprisoned." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "baraggan.jpg" },
+            { "Title", "Baraggan Louisenbairn" },
+            { "Description", "The former King of Hueco Mundo with the power of absolute decay." },
+            { "FullDescription", "Baraggan Louisenbairn was the Segunda Espada and the former ruler of Hueco Mundo before being overthrown by Aizen. His Respira ability allows him to emit a deadly mist that rapidly ages and disintegrates anything it touches, making him nearly untouchable in battle. His Zanpakuto, Arrogante, enhances this ability to an even greater extent, making him a walking embodiment of death. Despite his overwhelming power, his arrogance leads to his downfall when his own ability is turned against him. Even in death, he represents the inevitable decay of all things." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "byakuya.jpg" },
+            { "Title", "Byakuya Kuchiki" },
+            { "Description", "The noble and disciplined Captain of Squad 6, a master of swordsmanship and" },
+            { "FullDescription", "Byakuya Kuchiki is the Captain of the Sixth Division and a member of the noble Kuchiki clan. He is known for his cold, disciplined demeanor and unparalleled swordsmanship. His Zanpakuto, Senbonzakura, shatters into thousands of tiny blade fragments, which he controls with extreme precision to overwhelm his enemies. His Bankai, Senbonzakura Kageyoshi, creates an even greater number of these blades, turning entire battlefields into death traps. Though he initially adheres strictly to the laws of Soul Society, his encounters with Ichigo change his perspective, leading him to fight for what he truly believes is right." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "cifer.jpg" },
+            { "Title", "Ulquiorra Cifer" },
+            { "Description", "The emotionless Cuarta Espada with terrifying speed, regeneration, and a hidden second transformation." },
+            { "FullDescription", " Ulquiorra Cifer is the Cuarta Espada in Aizen’s army, known for his emotionless and analytical nature. He wields Murciélago, a Zanpakuto that transforms him into a bat-like entity with immense destructive power. Unlike other Espada, he possesses a hidden second release form, Resurrección: Segunda Etapa, which grants him an even greater boost in power, speed, and energy attacks. His Lanza del Relámpago can obliterate entire landscapes with a single strike. Despite his immense power, he remains fascinated by the concept of human emotions, especially after his final battle with Ichigo, where he begins to understand the meaning of a heart." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "coyote.jpg" },
+            { "Title", "Coyote Starrk" },
+            { "Description", "The Primera Espada, a lazy yet immensely powerful Hollow with unmatched speed and spiritual energy." },
+            { "FullDescription", "Coyote Starrk is the Primera Espada, the highest-ranked member of Aizen’s Arrancar army. Unlike other Espada, he dislikes violence and prefers solitude, but his immense power makes him a formidable opponent. His Zanpakuto, Los Lobos, allows him to split his soul into twin pistols, firing powerful energy blasts that can overwhelm even the strongest opponents. Starrk’s true ability lies in his overwhelming speed and spiritual pressure, making him nearly untouchable. Despite his strength, he longs for companionship, a tragic desire that ultimately leads to his downfall in battle."  }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "grimmjow.jpg" },
+            { "Title", "Grimmjow" },
+            { "Description", "The laid-back yet highly skilled leader of the Visored, wielding a reality-warping Zanpakuto." },
+            { "FullDescription", "Shinji Hirako is the former Captain of Squad 5 and the leader of the Visored, a group of Soul Reapers who have gained Hollow abilities. His Zanpakuto, Sakanade, manipulates an opponent’s sense of direction, reversing their movements and making combat against him highly disorienting. Beneath his carefree and sarcastic personality lies a sharp intellect, making him a master strategist. As one of the first to suspect Aizen’s treachery, Shinji plays a crucial role in the battles against both Aizen and the Quincy army, proving himself to be a dangerous opponent when serious." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "hirako.jpg" },
+            { "Title", "Shinji Hirako" },
+            { "Description", "The laid-back yet highly skilled leader of the Visored, wielding a reality-warping Zanpakuto." },
+            { "FullDescription", "Shinji Hirako is the former Captain of Squad 5 and the leader of the Visored, a group of Soul Reapers who have gained Hollow abilities. His Zanpakuto, Sakanade, manipulates an opponent’s sense of direction, reversing their movements and making combat against him highly disorienting. Beneath his carefree and sarcastic personality lies a sharp intellect, making him a master strategist. As one of the first to suspect Aizen’s treachery, Shinji plays a crucial role in the battles against both Aizen and the Quincy army, proving himself to be a dangerous opponent when serious." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "hitsugaya.jpg" },
+            { "Title", "Toshiro Hitsugaya" },
+            { "Description", "The youngest Soul Reaper Captain, a prodigy with mastery over ice-based attacks." },
+            { "FullDescription", "Toshiro Hitsugaya is the Captain of Squad 10 and a child prodigy with immense potential. Despite his young age, he possesses one of the most powerful ice-based Zanpakuto, Hyorinmaru, allowing him to manipulate ice on a massive scale. His Bankai, Daiguren Hyorinmaru, enhances his abilities even further, granting him wings of ice and increasing his combat power. Though often serious and disciplined, Hitsugaya’s deep sense of justice drives him to protect those he cares about, making him one of the most respected Captains in Soul Society. Over time, he unlocks the true form of his Bankai, achieving an adult-like transformation that greatly amplifies his power." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "ichibe.jpg" },
+            { "Title", "Ichibe Hyosube" },
+            { "Description", "The leader of the Royal Guard, a god-like being who commands the power of names." },
+            { "FullDescription", "Ichibe Hyosube is the head of the Zero Division, the Royal Guard that protects the Soul King. Unlike most Soul Reapers, he wields an ancient power that allows him to manipulate names, which grants him complete control over an opponent’s existence. His Zanpakuto, Ichimonji, can erase names, stripping enemies of their abilities and rendering them powerless. With centuries of combat experience, Ichibe is one of the strongest beings in the Bleach universe, capable of fighting Yhwach, the Quincy King, on nearly equal terms. His overwhelming strength and wisdom make him a guardian of balance in Soul Society." }
+        },
+
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "kaname.jpg" },
+            { "Title", "Kaname Tosen" },
+            { "Description", " A blind former Soul Reaper Captain who seeks justice through absolute control and darkness." },
+            { "FullDescription", "Kaname Tosen was the Captain of Squad 9 before betraying the Soul Society to follow Aizen. Despite his calm demeanor, he harbors deep resentment toward Soul Society, believing it to be corrupt. His Zanpakuto, Suzumushi, creates sound-based illusions and can unleash Bankai, Suzumushi Tsuishiki: Enma Kōrogi, which traps enemies in complete sensory deprivation, rendering them helpless. His loyalty to Aizen stems from his belief in achieving a world without violence, even if it means using brutal methods. In a final act of defiance, he mutates into a Hollow-like form, gaining enhanced abilities but ultimately meeting his demise at the hands of his former friend, Sajin Komamura." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "mayuri.jpg" },
+            { "Title", "Mayuri Kurotsuchi" },
+            { "Description", "The eccentric and sadistic Captain of Squad 12, a genius scientist obsessed with experimentation." },
+            { "FullDescription", "Mayuri Kurotsuchi is the head of the Research and Development Bureau, known for his grotesque experiments and unpredictable nature. His Zanpakuto, Ashisogi Jizo, releases a poison that paralyzes victims while keeping them conscious of their pain. His Bankai, Konjiki Ashisogi Jizo, manifests as a monstrous baby-like entity that spews deadly poison. Mayuri constantly modifies his body, making him nearly impossible to kill. Though he appears heartless, his intelligence and adaptability make him one of Soul Society’s most valuable assets, often finding unconventional solutions to overwhelming threats." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "shunsui.jpg" },
+            { "Title", "Shunsui Kyoraku" },
+            { "Description", "The laid-back yet formidable Captain-Commander of Soul Society, wielding a deadly child’s game-based Zanpakuto." },
+            { "FullDescription", "Shunsui Kyoraku is the Captain-Commander of the Gotei 13 and former Captain of Squad 8. Despite his easygoing and flirtatious personality, he is one of the most powerful Soul Reapers. His Zanpakuto, Katen Kyokotsu, forces enemies into lethal game-like battles, where the rules can change at any moment. His Bankai, Karamatsu Shinju, is among the most terrifying in Soul Society, affecting both the user and opponent in a tragic series of deadly curses. Shunsui’s wisdom, tactical mind, and immense spiritual power make him an irreplaceable leader, capable of making tough decisions to ensure the survival of Soul Society." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "ukitake.jpg" },
+            { "Title", "Jushiro Ukitake" },
+            { "Description", "The wise and kind-hearted Captain of Squad 13, burdened by illness yet possessing immense spiritual power." },
+            { "FullDescription", "Jushiro Ukitake was the Captain of Squad 13 and one of the most respected figures in Soul Society. Despite suffering from a chronic illness, his Zanpakuto, Sogyo no Kotowari, allows him to absorb and redirect attacks, making him a formidable opponent. His wisdom and compassion make him a mentor figure to many, including Rukia Kuchiki. In the final battle against Yhwach, Ukitake sacrifices himself to awaken Mimihagi, an entity that temporarily delays Yhwach’s god-like powers. His death marks the loss of one of Soul Society’s greatest protectors, but his legacy lives on through those he guided." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "unohana.jpg" },
+            { "Title", "Retsu Unohana" },
+            { "Description", "The former Captain of Squad 4, secretly the most feared and skilled swordswoman in Soul Society." },
+            { "FullDescription", "Retsu Unohana, originally known as Yachiru Unohana, was the first Kenpachi and the most skilled combatant in Soul Society’s history. Though she later became the Captain of Squad 4 and a renowned healer, she was once the most bloodthirsty warrior, feared even by other Soul Reapers. Her Zanpakuto, Minazuki, has both healing and destructive properties, capable of summoning a massive creature to heal allies or unleashing devastating attacks in battle. Her Bankai, Minazuki, turns her blade into a blood-like substance that continuously wounds and regenerates both her and her opponent, creating an endless cycle of battle. She ultimately sacrifices herself in a brutal fight against Kenpachi Zaraki, awakening his true potential as the strongest warrior." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "urahara.jpg" },
+            { "Title", "Kisuke Urahara" },
+            { "Description", "A brilliant scientist, former Captain of Squad 12, and the mastermind behind Soul Society’s greatest inventions." },
+            { "FullDescription", "Kisuke Urahara is a former Soul Reaper Captain and the founder of the Research & Development Institute. Despite his laid-back and eccentric personality, he is one of the most intelligent figures in the Bleach universe. His Zanpakuto, Benihime, is unique, allowing him to both attack and defend with powerful energy techniques. His Bankai, Kannonbiraki Benihime Aratame, grants him the ability to restructure anything it touches, making it one of the most versatile abilities in existence. Urahara played a key role in Aizen’s downfall, orchestrating strategies that even outwitted the would-be god. Though he often hides his true strength, he is undeniably one of the most powerful Soul Reapers ever" }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "yamamoto.jpg" },
+            { "Title", "Genryusai Yamamoto" },
+            { "Description", "The founder of the Gotei 13 and the most powerful Captain in Soul Society’s history." },
+            { "FullDescription", "Yamamoto was the Captain-Commander of the Gotei 13 for over a thousand years and the strongest Soul Reaper of his time. His Zanpakuto, Ryujin Jakka, is the most powerful fire-based weapon, capable of reducing anything to ashes. His Bankai, Zanka no Tachi, compresses his flames into an intense heat that rivals the sun, making it the most destructive ability in Soul Society. Despite his strict and unwavering belief in justice, he is willing to make brutal sacrifices for the greater good. He was ultimately killed by Yhwach, marking the end of an era for the Soul Society." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "yhwach.jpg" },
+            { "Title", "Yhwach" },
+            { "Description", "The almighty King of the Quincy, capable of rewriting reality itself." },
+            { "FullDescription", " Yhwach is the son of the Soul King and the leader of the Wandenreich, the Quincy empire. Known as the \"Father of the Quincy,\" he possesses the Schrift: Almighty, which allows him to see and alter all possible futures, making him nearly invincible. His mere presence is enough to strip Soul Reapers of their abilities, and he absorbs the Soul King to become a true god. Even with his overwhelming power, Yhwach is ultimately defeated by Ichigo and Aizen, proving that no being, no matter how strong, is truly invincible." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "zaraki.jpg" },
+            { "Title", "Kenpachi Zaraki" },
+            { "Description", "The most savage and battle-hungry Soul Reaper, thriving on pure combat instinct." },
+            { "FullDescription", "Kenpachi Zaraki is the Captain of Squad 11, known for his unparalleled love of battle and brute strength. Unlike other Soul Reapers, he relies purely on raw power and instinct rather than special techniques. After finally learning the name of his Zanpakuto, Nozarashi, he gains the ability to slice through almost anything. His Bankai transforms him into a berserker-like demon, drastically increasing his strength and speed to monstrous levels. His brutal training under Unohana allowed him to unlock his true potential, solidifying his status as one of the strongest Soul Reapers in history." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "soul_king.jpg" },
+            { "Title", "The Soul King" },
+            { "Description", "The divine entity who maintains balance in the universe but exists only as a lifeless figure." },
+            { "FullDescription", "The Soul King is the god-like being that sustains the balance between the Soul Society, the Human World, and Hueco Mundo. Though revered as an omnipotent deity, he is actually a passive and immobile existence, reduced to nothing more than a linchpin by the ancestors of the noble families. His body is divided into fragments, some of which became the Schutzstaffel (Yhwach’s elite Quincy guard). After Yhwach absorbs him, the world is thrown into chaos, revealing that the Soul King was never a ruler, but a necessary existence to keep reality intact." }
+        }
+    };
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/bleach.css" asp-append-version="true" />
+}
+
+<div class="content-block">
+    @foreach (var item in animeList)
+    {
+        <div class="content-container"
+             onclick="expandContent(this)"
+             data-image="@($"{basePath}{item["ImageFile"]}")"
+             data-title="@item["Title"]"
+             data-full-description="@item["FullDescription"]">
+
+            <img src="@($"{basePath}{item["ImageFile"]}")" alt="@item["Title"]" class="anime-img">
+            <h2 class="anime-title">@item["Title"]</h2>
+            <p class="anime-description">@item["Description"]...</p>
+            <button class="read-more-btn" onclick="expandContent(this.parentElement); event.stopPropagation();">Read More</button>
+        </div>
+    }
+</div>
+
+<!-- Expanded View Container -->
+<div id="expanded-view" class="expanded-view" onclick="closeExpanded(event)">
+    <div class="expanded-content">
+        <span class="close-btn" onclick="closeExpanded(event)">✖</span>
+        <img id="expanded-img" class="expanded-img" src="" alt="">
+        <h2 id="expanded-title" class="expanded-title"></h2>
+        <p id="expanded-description" class="expanded-description"></p>
+
+        <!-- Quotes Section -->
+        <div class="expanded-quote-container">
+            <p id="expanded-quote" class="expanded-quote"></p>
+        </div>
+
+        <!-- Next Quote Button -->
+        <div class="quote-btn-container">
+            <button class="next-quote-btn" onclick="nextQuote()">Next Quote</button>
+        </div>
+    </div>
+</div>

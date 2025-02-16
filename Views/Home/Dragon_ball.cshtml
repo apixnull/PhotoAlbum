@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Dragon Ball";
+}
+<h1>@ViewData["Title"]</h1>
+
+@{
+    string basePath = "/images/dragon_ball/"; // Base path for Dragon Ball images
+
+    var animeList = new List<Dictionary<string, string>>
+    {
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "goku.jpg" },
+            { "Title", "Goku" },
+            { "Description", "A Saiyan raised on Earth who strives to become the strongest fighter." },
+            { "FullDescription", "Son Goku is a powerful Saiyan warrior who protects Earth from powerful foes. With his ever-growing strength, he constantly seeks new challenges and transformations." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "vegeta.jpg" },
+            { "Title", "Vegeta" },
+            { "Description", "The proud Prince of all Saiyans, determined to surpass Goku." },
+            { "FullDescription", "Vegeta, the prince of the Saiyan race, is a proud and powerful warrior. Initially Goku’s rival, he now fights to become the strongest and defend his family and pride." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "gohan.jpg" },
+            { "Title", "Gohan" },
+            { "Description", "A Saiyan-Human hybrid with untapped potential and immense strength." },
+            { "FullDescription", "Gohan, the son of Goku, has incredible hidden potential. Though he prefers peace, his strength rises to incredible levels when those he loves are threatened." }
+        }
+    };
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/dragon_ball.css" asp-append-version="true" />
+}
+
+<div class="content-block">
+    @foreach (var item in animeList)
+    {
+        <div class="content-container"
+             onclick="expandContent(this)"
+             data-image="@($"{basePath}{item["ImageFile"]}")"
+             data-title="@item["Title"]"
+             data-full-description="@item["FullDescription"]">
+
+            <img src="@($"{basePath}{item["ImageFile"]}")" alt="@item["Title"]" class="anime-img">
+            <h2 class="anime-title">@item["Title"]</h2>
+            <p class="anime-description">@item["Description"]...</p>
+            <button class="read-more-btn" onclick="expandContent(this.parentElement); event.stopPropagation();">Read More</button>
+        </div>
+    }
+</div>
+
+<!-- Expanded View Container -->
+<div id="expanded-view" class="expanded-view" onclick="closeExpanded(event)">
+    <div class="expanded-content">
+        <span class="close-btn" onclick="closeExpanded(event)">✖</span>
+        <img id="expanded-img" class="expanded-img" src="" alt="">
+        <h2 id="expanded-title" class="expanded-title"></h2>
+        <p id="expanded-description" class="expanded-description"></p>
+
+        <!-- Quotes Section -->
+        <div class="expanded-quote-container">
+            <p id="expanded-quote" class="expanded-quote"></p>
+        </div>
+
+        <!-- Next Quote Button -->
+        <div class="quote-btn-container">
+            <button class="next-quote-btn" onclick="nextQuote()">Next Quote</button>
+        </div>
+    </div>
+</div>

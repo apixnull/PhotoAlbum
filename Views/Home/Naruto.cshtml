@@ -1,0 +1,197 @@
+﻿@{
+    ViewData["Title"] = "Naruto";
+}
+<h1>@ViewData["Title"]</h1>
+<h2 class="sub-head">Some of the Strongest Character in Naruto</h2>
+@{
+    string basePath = "/images/naruto/"; // Base path for Naruto images
+
+    var animeList = new List<Dictionary<string, string>>
+    {
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "naruto.jpg" },
+            { "Title", "Naruto Uzumaki" },
+            { "Description", "A young ninja who dreams of becoming the Hokage and earning the village's respect." },
+            { "FullDescription", "Naruto Uzumaki is an orphan ninja who aspires to be Hokage. He has a strong determination to never give up, no matter the challenge.Naruto Uzumaki is an orphan ninja who aspires to be Hokage. He has a strong determination to never give up, no matter the challenge.Naruto Uzumaki is an orphan ninja who aspires to be Hokage. He has a strong determination to never give up, no matter the challenge.Naruto Uzumaki is an orphan ninja who aspires to be Hokage. He has a strong determination to never give up, no matter the challenge.Naruto Uzumaki is an orphan ninja who aspires to be Hokage. He has a strong determination to never give up, no matter the challenge.Naruto Uzumaki is an orphan ninja who aspires to be Hokage. He has a strong determination to never give up, no matter the challenge." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "sasuke.png" },
+            { "Title", "Sasuke Uchiha" },
+            { "Description", "Naruto's rival and a member of the Uchiha clan, seeking vengeance for his family's downfall." },
+            { "FullDescription", "Sasuke Uchiha is a gifted yet tormented ninja from the prestigious Uchiha clan. After witnessing the massacre of his entire family at the hands of his older brother, Itachi, he dedicates his life to becoming stronger and seeking revenge. Once a loyal teammate of Naruto and Sakura, Sasuke grows distant, choosing a darker path in pursuit of power. His journey is one of internal conflict, as he struggles between his thirst for vengeance and the bonds he once cherished. Through countless battles and betrayals, Sasuke ultimately discovers the true meaning of strength, legacy, and redemption." },
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "itachi.png" },
+            { "Title", "Uchiha Itachi" },
+            { "Description", "A mysterious figure with a tragic past, burdened with the secrets of the Uchiha clan." },
+            { "FullDescription", "Itachi Uchiha is a prodigy of the Uchiha clan, known for his unparalleled intelligence, skill, and composure. Once revered as a hero, he became infamous for massacring his entire clan, sparing only his younger brother, Sasuke. Branded as a traitor and joining the Akatsuki, Itachi concealed his true motives—sacrificing everything to protect the Hidden Leaf Village from an impending coup. Behind his cold exterior lies a man burdened by duty, love, and regret. His story is one of deception, sacrifice, and a heartbreaking truth that only unfolds after his death, revealing him as a tragic hero rather than a villain." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "kakashi.png" },
+            { "Title", "Hatake Kakashi" },
+            { "Description", "A skilled and mysterious ninja known as the Copy Ninja, admired for his wisdom and combat expertise." },
+            { "FullDescription", "Kakashi Hatake is an elite shinobi of the Hidden Leaf Village, renowned for his mastery of the Sharingan and his ability to copy over a thousand jutsu, earning him the title \"Copy Ninja.\" A former child prodigy, he was shaped by tragedy, losing his father, best friend Obito, and teammate Rin at a young age. Despite his aloof and laid-back demeanor, Kakashi is a brilliant strategist and a compassionate leader, guiding Naruto, Sasuke, and Sakura as their sensei. Beneath his masked face lies a man carrying deep regrets, yet his journey teaches him the true value of teamwork, loyalty, and perseverance." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "jiraiya.png" },
+            { "Title", "Jiraiya The Sannin" },
+            { "Description", "A legendary ninja, renowned author, and mentor who seeks peace while embracing his free-spirited nature." },
+            { "FullDescription", "Jiraiya, one of the Legendary Sannin, is a powerful ninja of the Hidden Leaf Village known for his unmatched combat skills, intelligence, and eccentric personality. Though often seen as a carefree traveler and self-proclaimed pervy sage, he carries a deep sense of responsibility and wisdom. As Naruto Uzumaki’s mentor, he teaches him essential ninja techniques, including the Rasengan, and instills in him the values of perseverance and self-belief. Behind his humorous and easygoing nature, Jiraiya is a man burdened by past failures, dedicating his life to uncovering the truth behind the Akatsuki and fulfilling his dream of achieving true peace. His ultimate sacrifice cements his legacy as a beloved teacher, warrior, and visionary." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "minato.png" },
+            { "Title", "Namikaze Minato" },
+            { "Description", "The Fourth Hokage, known as the Yellow Flash, a genius ninja revered for his speed and selfless sacrifice." },
+            { "FullDescription", "Minato Namikaze, the Fourth Hokage of the Hidden Leaf Village, was a legendary shinobi known for his incredible speed, intelligence, and mastery of space-time jutsu, including the Flying Thunder God Technique. His heroism was most evident when he sacrificed his life to seal the Nine-Tailed Fox inside his newborn son, Naruto, hoping to give him a future of strength and resilience. A brilliant tactician, a loving husband to Kushina, and an inspirational leader, Minato’s legacy lives on through his teachings, his sacrifice, and the will of fire he passed down to the next generation." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "hashirama.jpg" },
+            { "Title", "Senju Hashirama" },
+            { "Description", "The First Hokage and co-founder of the Hidden Leaf Village, known as the God of Shinobi." },
+            { "FullDescription", "Hashirama Senju, the First Hokage, was a legendary ninja who sought peace and unity in the war-torn shinobi world. Blessed with extraordinary strength and Wood Release abilities, he was unmatched in battle, even overpowering his lifelong rival, Madara Uchiha. Hashirama’s dream was to end the cycle of hatred among ninja clans, leading to the creation of the Hidden Leaf Village alongside Madara. Despite his overwhelming power, he was a kind-hearted and optimistic leader who valued friendship and diplomacy over war. His ideals of unity and peace shaped the foundation of the shinobi world, making him a revered figure in history." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "madara.png" },
+            { "Title", "Uchiha Madara" },
+            { "Description", "A legendary Uchiha warrior who sought ultimate power to reshape the world in his vision." },
+            { "FullDescription", "Madara Uchiha was a feared and respected shinobi, co-founder of the Hidden Leaf Village, and the greatest rival of Hashirama Senju. A genius in battle, he possessed the Eternal Mangekyō Sharingan and later the Rinnegan, making him one of the most powerful shinobi in history. Disillusioned by the endless cycle of war, Madara sought to create a world free of suffering through his Moon’s Eye Plan, using the Infinite Tsukuyomi to cast a dreamlike illusion over reality. Though his methods were ruthless, his goal was ultimately peace, making him a complex figure driven by both ambition and a deep-rooted desire to end the shinobi world's suffering." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "obito.jpeg" },
+            { "Title", "Uchiha Obito" },
+            { "Description", "A fallen Uchiha who sought to reshape the world through pain but was ultimately redeemed by his past." },
+            { "FullDescription", "Obito Uchiha was once a kind-hearted and ambitious young ninja who aspired to become Hokage. However, after witnessing the death of Rin, the girl he loved, he fell into despair and was manipulated by Madara Uchiha. Abandoning his old ideals, he adopted the alias Tobi and orchestrated global conflict under the Akatsuki, believing that only through the Infinite Tsukuyomi could the world be freed from suffering. Despite his descent into darkness, Naruto’s unwavering resolve helped him find redemption, and in the end, Obito sacrificed himself to aid in the battle against Kaguya, proving that even the lost can find their way back." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "tobirama.jpg" },
+            { "Title", "Senju Tobirama" },
+            { "Description", "The Second Hokage, a tactical genius who shaped the Hidden Leaf's foundation with his innovations." },
+            { "FullDescription", "Tobirama Senju, the Second Hokage, was a brilliant and pragmatic leader responsible for many of the fundamental structures of the Hidden Leaf Village, including the Academy, the Chūnin Exams, and the ANBU. A master of Water Release, he was one of the fastest and most powerful shinobi of his time. Despite his distrust of the Uchiha clan, which fueled historical tensions, his decisions were made with the village's best interests in mind. Though often seen as strict and militaristic, his leadership laid the groundwork for the future of Konoha, ensuring its stability and growth for generations." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "pain.png" },
+            { "Title", "Pain (Nagato)" },
+            { "Description", "A war-torn shinobi who sought peace through pain, leading the Akatsuki in his quest for a new world." },
+            { "FullDescription", "Nagato, also known as Pain, was once a kind-hearted boy from Amegakure who dreamed of bringing peace to the world. Trained by Jiraiya and wielding the legendary Rinnegan, he endured immense suffering after losing his closest friend, Yahiko. Believing that only through pain could people understand each other, he led the Akatsuki down a path of destruction, hoping to use fear as a means to peace. However, after encountering Naruto, Nagato saw a new possibility—a path of hope rather than pain. In his final act, he sacrificed himself to revive the lives lost in his attack on Konoha, entrusting Naruto with the dream of true peace." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "kisami.jpg" },
+            { "Title", "Hoshigaki Kisami" },
+            { "Description", "The Monster of the Hidden Mist, a loyal Akatsuki member with shark-like features and immense power." },
+            { "FullDescription", "Kisame Hoshigaki was a ruthless yet fiercely loyal shinobi from the Hidden Mist Village, known for his incredible chakra reserves and mastery of Water Release. As a wielder of Samehada, the living sword that absorbs chakra, he was a formidable warrior and a trusted partner of Itachi Uchiha. Despite his monstrous appearance and brutality, Kisame believed in loyalty and purpose, aligning himself with the Akatsuki’s vision of a new world. Even in death, he remained steadfast, choosing to die by his own hand rather than betray his cause, cementing his legacy as a true shinobi who lived and died by his convictions." }
+        },
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "shisui.jpeg" },
+            { "Title", "Uchiha Shisue" },
+            { "Description", "A noble Uchiha who sought peace and sacrificed everything to protect his village." },
+            { "FullDescription", "Shisui Uchiha was one of the most gifted members of the Uchiha clan, possessing the powerful Kotoamatsukami, a genjutsu capable of altering a person’s mind without them realizing it. A pacifist at heart, he sought to prevent conflict between the Uchiha and the Hidden Leaf, but his clan’s growing hostility forced him into an impossible position. To prevent war, he entrusted his Sharingan to Itachi and took his own life, hoping his sacrifice would inspire peace. Though his name faded into history, his actions played a pivotal role in shaping Itachi’s decisions and preserving Konoha’s future." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "Orochimaru.jpg" },
+            { "Title", "Orichumaru The Sannin" },
+            { "Description", "A rogue Sannin obsessed with immortality and forbidden jutsu, seeking the secrets of life itself." },
+            { "FullDescription", "Orochimaru, once a respected member of the Legendary Sannin, is a cunning and ambitious shinobi who became infamous for his unethical experiments and pursuit of eternal life. Fascinated by the potential of human evolution, he defected from the Hidden Leaf and formed his own rogue organization. Despite his villainous actions, Orochimaru’s character is complex—he is both a ruthless scientist and an enigmatic mentor, guiding individuals like Sasuke for his own interests. Over time, his motivations shift from conquest to curiosity, and he ultimately plays a role in the Fourth Great Ninja War, showing that even the most feared individuals can evolve." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "guy.png" },
+            { "Title", "Might Guy" },
+            { "Description", "A passionate and unstoppable taijutsu master who proves that hard work can surpass natural talent." },
+            { "FullDescription", "Might Guy is the embodiment of perseverance and determination, known for his eccentric personality, boundless energy, and unparalleled taijutsu skills. Lacking natural talent, he relied on sheer dedication to become one of the strongest warriors in the Hidden Leaf. His ultimate technique, the Eight Gates, allows him to rival even the most powerful shinobi at the cost of his own life. His battle against Madara Uchiha during the Fourth Great Ninja War showcased his immense strength and unwavering spirit. Despite his over-the-top personality, Guy is a wise and caring mentor, inspiring his students—especially Rock Lee—to never give up." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "deidara.jpg" },
+            { "Title", "Deidara of Iwagakure" },
+            { "Description", "An explosive artist and Akatsuki member who believes true beauty lies in destruction." },
+            { "FullDescription", "Deidara, a rogue shinobi from the Hidden Stone Village and a member of the Akatsuki, is a master of explosive clay and a devoted artist. Viewing his explosive creations as the pinnacle of artistic expression, he takes immense pride in his \"art is an explosion\" philosophy. His arrogance and competitive nature often put him at odds with others, particularly Sasuke Uchiha, whom he viewed as a challenge to his ideals. Deidara’s combat skills, ingenuity, and unpredictability made him a deadly adversary, and even in death, he remained true to his beliefs, turning himself into his final masterpiece." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "kaguya.jpg" },
+            { "Title", "Otsutsuki Kaguya" },
+            { "Description", "The progenitor of chakra and the first wielder of the Rinne Sharingan, feared as a goddess." },
+            { "FullDescription", "Kaguya Otsutsuki is the ancient being who introduced chakra to humanity, consuming the God Tree’s fruit and later becoming the first wielder of the Rinne Sharingan. Once a benevolent ruler, she grew paranoid and sought to dominate mankind, ultimately transforming into the fearsome Ten-Tails. Sealed away by her own sons, Hagoromo and Hamura, she remained a legend until her eventual revival during the Fourth Great Ninja War. Though immensely powerful, her actions stemmed from a deep fear of losing control. Kaguya’s return marked the ultimate test for Naruto and Sasuke, proving that power without balance leads only to destruction." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "hagoromo.jpg" },
+            { "Title", "Otsutsuki Hagoromo" },
+            { "Description", "The Sage of Six Paths, the founder of ninjutsu, and the legendary figure who shaped the shinobi world." },
+            { "FullDescription", "Hagoromo Otsutsuki, also known as the Sage of Six Paths, was the son of Kaguya Otsutsuki and the first wielder of chakra to use it for the benefit of humanity. He founded ninjutsu and spread his teachings to create the ninja world. With his brother Hamura, he sealed their mother, Kaguya, after she transformed into the Ten-Tails. To prevent the beast's destruction, he divided its chakra into nine tailed beasts, giving them individual identities. Hagoromo’s wisdom and vision of peace lived on through his descendants, the Uchiha and Senju clans, as well as through Naruto and Sasuke, whom he entrusted with his power to stop Kaguya’s return." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "gaara.jpeg" },
+            { "Title", "Gaara of the Dessert" },
+            { "Description", "A former outcast and jinchūriki who overcame hatred to become the Kazekage and a symbol of peace." },
+            { "FullDescription", "Gaara was once a feared and lonely child, shunned by his village due to being the jinchūriki of Shukaku, the One-Tail. Raised in isolation and manipulated into believing that strength comes from hatred, he became a ruthless killer. However, after his battle with Naruto, Gaara underwent a profound change, realizing that bonds and love, not fear, define true strength. Over time, he earned the trust of his people and rose to become the Fifth Kazekage, dedicating himself to protecting his village and fostering unity among shinobi. His journey from a feared outcast to a respected leader stands as a testament to redemption and change." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "shikamaru.jpg" },
+            { "Title", "Nara Shukamaru" },
+            { "Description", "A lazy yet brilliant strategist whose intellect makes him one of Konoha’s most valuable leaders." },
+            { "FullDescription", "Shikamaru Nara is a naturally gifted strategist, known for his laid-back attitude and genius-level intellect. Initially unmotivated and uninterested in responsibility, he gradually matures into one of the Hidden Leaf’s most capable leaders. His analytical mind allows him to outthink even the most formidable opponents, making him a key figure in Konoha’s defense and diplomacy. After the loss of his mentor, Asuma, Shikamaru took on greater responsibilities, eventually becoming Naruto’s right-hand advisor as the Chief Aide to the Hokage. Though he prefers a quiet life, his loyalty, wisdom, and tactical brilliance make him indispensable to the shinobi world." }
+        }
+    };
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/naruto.css" asp-append-version="true" />
+}
+
+<div class="content-block">
+    @foreach (var item in animeList)
+    {
+        <div class="content-container"
+             onclick="expandContent(this)"
+             data-image="@($"{basePath}{item["ImageFile"]}")"
+             data-title="@item["Title"]"
+             data-full-description="@item["FullDescription"]">
+            <img src="@($"{basePath}{item["ImageFile"]}")" alt="@item["Title"]" class="anime-img">
+            <h2 class="anime-title">@item["Title"]</h2>
+            <p class="anime-description">@item["Description"]...</p>
+            <button class="read-more-btn" onclick="expandContent(this.parentElement); event.stopPropagation();">Read More</button>
+        </div>
+    }
+</div>
+
+
+<!-- Expanded View Container -->
+<div id="expanded-view" class="expanded-view" onclick="closeExpanded(event)">
+    <div class="expanded-content">
+        <!-- 🔴 MAKE SURE THIS BUTTON EXISTS -->
+        <span class="close-btn" onclick="closeExpanded(event)">✖</span>
+
+        <img id="expanded-img" class="expanded-img" src="" alt="">
+        <h2 id="expanded-title" class="expanded-title"></h2>
+        <p id="expanded-description" class="expanded-description"></p>
+
+        <!-- Quotes Section -->
+        <div class="expanded-quote-container">
+            <p id="expanded-quote" class="expanded-quote"></p>
+        </div>
+
+        <!-- Next Quote Button -->
+        <div class="quote-btn-container">
+            <button class="next-quote-btn" onclick="nextQuote()">Next Quote</button>
+        </div>
+    </div>
+</div>
+
+

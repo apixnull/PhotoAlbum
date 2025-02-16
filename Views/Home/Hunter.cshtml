@@ -1,0 +1,193 @@
+﻿@{
+    ViewData["Title"] = "Hunter X Hunter";
+}
+<h1>@ViewData["Title"]</h1>
+<h2 class="sub-head">Some of the Strongest Character in Hunter Hunter</h2>
+@{
+    string basePath = "/images/hunter/"; // Base path for Hunter x Hunter images
+
+    var animeList = new List<Dictionary<string, string>>
+    {
+        new Dictionary<string, string>
+        {
+            { "ImageFile", "gon.jpg" },
+            { "Title", "Gon Freecss" },
+            { "Description", "A young and determined Hunter who seeks to find his father while discovering his own immense potential." },
+            { "FullDescription", "Gon Freecss is an adventurous and optimistic boy who embarks on the Hunter journey to find his estranged father, Ging Freecss. Despite his cheerful nature, Gon has an unparalleled resolve, pushing himself beyond limits most would never dare to reach. His raw talent in Nen, combined with his adaptability, makes him a formidable opponent. During the Chimera Ant arc, he sacrifices his entire future potential to achieve a godlike transformation, showcasing his willingness to risk everything for revenge. His journey is one of growth, friendship, and discovering what it truly means to be a Hunter." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "kilua.jpg" },
+            { "Title", "Killua Zoldyck" },
+            { "Description", "A former assassin from the infamous Zoldyck family who chooses friendship and freedom over his dark past." },
+            { "FullDescription", "Killua Zoldyck is a prodigy of the feared Zoldyck family, raised from birth to be a perfect assassin. Despite his incredible skills, speed, and intelligence, he rejects his family's ruthless ways after befriending Gon. Killua possesses immense Nen talent, particularly with his \"Godspeed\" ability, which allows him to move faster than most can react. Though he struggles with self-doubt due to his abusive upbringing, his journey is one of self-discovery, proving that he is more than just an assassin. His unwavering loyalty to Gon and his love for his little sister, Alluka, show the depth of his character beyond his deadly skills." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "kurapika.jpg" },
+            { "Title", "Kurapika" },
+            { "Description", "The last surviving member of the Kurta Clan, driven by vengeance against the Phantom Troupe." },
+            { "FullDescription", "Kurapika is a highly intelligent and strategic individual who dedicates his life to avenging his fallen clan, whose members were slaughtered for their Scarlet Eyes. As a Nen user, he possesses \"Emperor Time,\" allowing him to use all Nen categories at 100% efficiency, making him an unstoppable force, particularly against the Phantom Troupe. Though initially consumed by revenge, Kurapika’s journey reveals his inner conflict—torn between justice and the price of his obsession. His role later expands beyond revenge, as he becomes a key player in political conflicts, showcasing his growth as both a warrior and a leader." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "alluka.jpg" },
+            { "Title", "Alluka Zoldyck" },
+            { "Description", "Killua's younger sister with a mysterious and terrifying wish-granting ability." },
+            { "FullDescription", "Alluka Zoldyck is an enigma within the Zoldyck family, feared due to her unique ability linked to an entity known as \"Nanika.\" Unlike her cold and ruthless family, Alluka is kind-hearted and deeply loves Killua, who is the only one that treats her as a person rather than a danger. Nanika has the ability to grant almost any wish, but at a horrifying cost—failing to meet its conditions can lead to devastating consequences. Despite this, Alluka is a symbol of innocence in the Zoldyck family, and her bond with Killua highlights his humanity and desire to protect those he loves." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "chrollo.jpg" },
+            { "Title", "Chrollo Lucilfer" },
+            { "Description", "The cunning and charismatic leader of the Phantom Troupe, a master of stolen Nen abilities." },
+            { "FullDescription", "Chrollo Lucilfer is the enigmatic and highly intelligent leader of the Phantom Troupe, a band of ruthless criminals. A master strategist and manipulator, he remains calm under any situation, making him one of the deadliest characters in the series. His Nen ability, \"Skill Hunter,\" allows him to steal and use other people’s abilities, making him incredibly versatile in combat. Though he appears emotionless at times, he values the Troupe members as his family, showing a deeper sense of loyalty beyond his cold exterior. His battle against Hisoka proved his ruthlessness, as he meticulously planned every move to ensure his victory." }
+        },
+          new Dictionary<string, string>
+        {
+            { "ImageFile", "feitan.jpg" },
+            { "Title", "Feitan Portor" },
+            { "Description", "A deadly and sadistic member of the Phantom Troupe, known for his incredible speed and devastating Nen ability." },
+            { "FullDescription", "Feitan Portor is one of the fastest and most ruthless members of the Phantom Troupe. Despite his small stature, he is a terrifying opponent, displaying brutal efficiency in combat. As the Troupe’s interrogator, he enjoys inflicting pain, often speaking in broken sentences when excited. His Nen ability, \"Rising Sun,\" converts the pain he receives into a fiery explosion, incinerating enemies instantly. Though he rarely speaks of emotions, his leadership qualities emerge when he temporarily assumes command after Chrollo's absence, proving his value beyond just raw combat skills." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "ging.jpg" },
+            { "Title", "Ging Freecss" },
+            { "Description", "An elusive and eccentric Double-Star Hunter, considered one of the most intelligent and skilled Nen users in the world." },
+            { "FullDescription", "Ging Freecss is a genius-level Nen user and the father of Gon Freecss, though he is more interested in adventure than parenting. He is a master strategist, often staying ten steps ahead of others, and his unpredictable nature makes him difficult to read. His Nen abilities remain largely unknown, but even the most powerful figures, including Netero, acknowledge his talent. Despite his reputation as a terrible father, Ging subtly watches over Gon, ensuring his son’s growth while maintaining his freedom. His true potential remains a mystery, as he has yet to engage in direct combat on-screen." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "hisoka.jpg" },
+            { "Title", "Hisoka Morow" },
+            { "Description", "A deadly, unpredictable, and sadistic fighter obsessed with finding strong opponents to satisfy his thirst for battle." },
+            { "FullDescription", "Hisoka Morow is a former Phantom Troupe member and a deadly wildcard in the Hunter world. Driven purely by entertainment and self-interest, he seeks out powerful opponents, often letting them grow stronger before fighting them. His Nen ability, \"Bungee Gum,\" has both elasticity and stickiness, making it an unpredictable tool in battle. His combat style is as theatrical as his personality, with a mix of charm, sadism, and unpredictability. Even after being seemingly killed by Chrollo, he revived himself using Nen and is now on a hunt to kill all Phantom Troupe members. His true power lies not just in his strength but in his cunning adaptability." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "illumi.jpg" },
+            { "Title", "Illumi Zoldyck" },
+            { "Description", "A cold and calculating assassin from the Zoldyck family, specializing in mind control and manipulation." },
+            { "FullDescription", "Illumi Zoldyck is Killua's eldest brother and a top-tier assassin whose cold and emotionless nature makes him one of the most terrifying figures in Hunter x Hunter. His Nen ability allows him to implant needles into others, controlling their actions with frightening precision. His obsession with controlling Killua’s life stems from his belief that emotions make an assassin weak. Despite his lack of emotions, Illumi maintains strong ties with Hisoka, forming an eerie and unpredictable partnership. His calm demeanor masks a dangerous mind, making him one of the most manipulative and intelligent characters in the series." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "kalluto.jpg" },
+            { "Title", "Kalluto Zoldyck" },
+            { "Description", "The youngest Zoldyck sibling and a member of the Phantom Troupe, wielding deadly paper-based Nen techniques." },
+            { "FullDescription", "Kalluto Zoldyck is the youngest member of the Zoldyck family and a mysterious member of the Phantom Troupe. Initially appearing quiet and reserved, Kalluto later reveals an ambitious and cunning side, seeking to prove his strength. His Nen ability allows him to manipulate paper with incredible precision, using it for reconnaissance and deadly attacks. Despite his young age, he holds his own among the Troupe, though he desires to surpass his older brother, Killua. His potential is immense, and as he continues to grow, he may become one of the deadliest Zoldycks." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "kikyo.jpg" },
+            { "Title", "Kikyo Zoldyck" },
+            { "Description", "The strict and overprotective mother of the Zoldyck family, obsessed with controlling Killua’s destiny." },
+            { "FullDescription", "Kikyo Zoldyck is the wife of Silva Zoldyck and the mother of Killua. She is fiercely devoted to the Zoldyck family's assassin legacy and is obsessed with grooming Killua into the perfect heir. Despite her elegant appearance, she has a twisted and controlling nature, going as far as implanting Illumi’s needles into Killua to suppress his free will. Though her combat abilities remain largely unknown, her high status in the Zoldyck family implies she is a highly skilled Nen user. She shows extreme paranoia and fear whenever Killua disobeys her, indicating a deep yet possessive attachment to her son." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "kite.jpg" },
+            { "Title", "Kite" },
+            { "Description", "A skilled Hunter and disciple of Ging Freecss, known for his mysterious and unpredictable weapon-based Nen ability." },
+            { "FullDescription", "Kite is a highly skilled Hunter and one of Ging Freecss’s most trusted disciples. He serves as a mentor to Gon, teaching him the harsh realities of being a Hunter. His Nen ability, \"Crazy Slots,\" allows him to summon random weapons based on a roulette system, forcing him to adapt to whatever weapon he gets. During the Chimera Ant arc, he faces Neferpitou and is ultimately defeated, though his fighting spirit persists even after death. Reincarnated as a Chimera Ant with his memories intact, Kite continues his journey, proving that his will to survive and fight remains unbroken." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "meruem.jpg" },
+            { "Title", "Meruem" },
+            { "Description", "The King of the Chimera Ants, born with godlike strength, intelligence, and an unmatched aura of dominance." },
+            { "FullDescription", "Meruem is the ultimate Chimera Ant, possessing overwhelming power, speed, and intellect that surpasses nearly all beings in the world. From birth, he exhibits extreme arrogance and views humans as inferior creatures. However, his interactions with Komugi, a blind Gungi player, slowly change his perspective on life and humanity. Despite being the most powerful character in the series, capable of adapting and evolving mid-battle, he meets his tragic end due to Netero’s sacrifice. His transformation from a ruthless conqueror to a being capable of love and understanding makes his character arc one of the most profound in the series." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "morel.jpg" },
+            { "Title", "Morel Mackernasey" },
+            { "Description", "A seasoned Hunter and master strategist who uses his smoke-based Nen abilities to outmaneuver enemies." },
+            { "FullDescription", "Morel Mackernasey is a highly skilled Hunter known for his immense lung capacity, which allows him to manipulate smoke as a powerful Nen weapon. His ability, \"Deep Purple,\" creates a variety of smoke-based constructs, allowing him to deceive, trap, and overwhelm opponents. Despite his laid-back personality, he is a brilliant strategist, playing a crucial role in the battle against the Chimera Ants. His experience, composure under pressure, and ability to fight opponents far stronger than himself showcase his incredible tactical mind and resourcefulness." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "neferpitou.jpg" },
+            { "Title", "NeferpitouNeferpitou" },
+            { "Description", "The most powerful of Meruem’s Royal Guards, possessing unmatched healing and combat abilities." },
+            { "FullDescription", "often referred to as \"Pitou,\" is one of the three Royal Guards of Meruem, displaying an unsettling mix of childlike curiosity and terrifying sadism. As the most powerful of the guards, Pitou possesses extreme speed, agility, and Nen mastery, making them an unstoppable force in battle. Their ability, \"Doctor Blythe,\" allows for near-instant healing, while \"Terpsichora\" enhances their speed and reflexes to inhuman levels. Despite their unwavering loyalty to Meruem, their demise comes at the hands of an enraged Gon, who sacrifices his own future potential to exact revenge."}
+        },
+           new Dictionary<string, string>
+        {
+            { "ImageFile", "netero.jpg" },
+            { "Title", "Isaac Netero" },
+            { "Description", "The legendary Chairman of the Hunter Association, revered as the strongest martial artist in history." },
+            { "FullDescription", "Isaac Netero is the former Chairman of the Hunter Association and one of the most formidable warriors to have ever lived. His life was dedicated to mastering martial arts, and through decades of training, he developed a level of speed and power that made him nearly untouchable. His ultimate technique, the \"100-Type Guanyin Bodhisattva,\" allows him to unleash a barrage of devastating strikes with divine precision. Even against Meruem, Netero remains unfazed, forcing the Ant King into battle and ultimately sacrificing himself with the \"Poor Man’s Rose\" bomb, leaving a lasting impact on the Hunter world." }
+        },
+           new Dictionary<string, string>
+        {
+            { "ImageFile", "shaiapouf.jpg" },
+            { "Title", "Shaiapouf" },
+            { "Description", "One of Meruem’s Royal Guards, a master manipulator who uses his intelligence and Nen to control others." },
+            { "FullDescription", "Shaiapouf, also known as \"Pouf,\" is one of Meruem’s three Royal Guards, possessing immense loyalty and an obsessive admiration for his king. Unlike his fellow guards, Pouf relies on psychological warfare rather than brute strength, using his Nen ability, \"Spiritual Message,\" to read emotions and manipulate people. His ability to divide his body into countless tiny clones allows him to be nearly omnipresent in battle. However, his overconfidence and devotion to shaping Meruem into the \"perfect king\" ultimately lead to his downfall. His character represents the dangers of blind loyalty and ambition." }
+        },
+           new Dictionary<string, string>
+        {
+            { "ImageFile", "silva.jpg" },
+            { "Title", "Silva Zoldyck" },
+            { "Description", "The powerful head of the Zoldyck family, feared as one of the deadliest assassins in the world." },
+            { "FullDescription", "Silva Zoldyck is the father of Killua and the current leader of the infamous Zoldyck assassin family. A man of few words, Silva possesses immense physical strength, intelligence, and mastery over Nen, making him one of the deadliest fighters alive. He is shown effortlessly killing a Chimera Ant Royal Guard with a single strike, showcasing his overwhelming power. Despite his ruthless nature, he allows Killua to carve his own path, demonstrating a level of understanding rare within the Zoldyck family. His full capabilities remain largely unknown, but his reputation alone cements him as one of the most feared figures in the Hunter world." }
+        },
+           new Dictionary<string, string>
+        {
+            { "ImageFile", "uvogin.jpg" },
+            { "Title", "Uvogin" },
+            { "Description", "The strongest physical fighter of the Phantom Troupe, known for his brute strength and unmatched durability." },
+            { "FullDescription", " Uvogin was the most physically powerful member of the Phantom Troupe, capable of taking direct missile strikes and bullets without injury. His Nen ability, \"Big Bang Impact,\" allowed him to deliver devastating punches equivalent to an explosive blast. Unlike his more strategic teammates, Uvogin thrived in close combat, overwhelming opponents with sheer power. His loyalty to the Troupe was absolute, and even in death, he refused to betray them. Despite his incredible strength, he was ultimately defeated by Kurapika, whose Nen ability specifically countered him, marking one of the most shocking deaths in the series." }
+        },
+         new Dictionary<string, string>
+        {
+            { "ImageFile", "zeno.jpg" },
+            { "Title", "Zeno Zoldyck" },
+            { "Description", "A master assassin and grandfather of Killua, possessing unrivaled speed, experience, and strategic intellect." },
+            { "FullDescription", "Zeno Zoldyck is a legendary assassin and one of the most skilled Nen users in the world. Despite his old age, he remains a deadly force, capable of keeping up with some of the strongest fighters, including Chrollo Lucilfer. His Nen ability allows him to create and manipulate massive dragons with incredible destructive power, as seen in his 'Dragon Dive' attack. Unlike many members of his family, Zeno operates with a sense of professionalism, only accepting contracts that align with his principles. His experience and wisdom make him a terrifying opponent, capable of predicting enemy movements and adapting in battle." }
+        }
+    };
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/hunter.css" asp-append-version="true" />
+}
+
+<div class="content-block">
+    @foreach (var item in animeList)
+    {
+        <div class="content-container"
+             onclick="expandContent(this)"
+             data-image="@($"{basePath}{item["ImageFile"]}")"
+             data-title="@item["Title"]"
+             data-full-description="@item["FullDescription"]">
+
+            <img src="@($"{basePath}{item["ImageFile"]}")" alt="@item["Title"]" class="anime-img">
+            <h2 class="anime-title">@item["Title"]</h2>
+            <p class="anime-description">@item["Description"]...</p>
+            <button class="read-more-btn" onclick="expandContent(this.parentElement); event.stopPropagation();">Read More</button>
+        </div>
+    }
+</div>
+
+<!-- Expanded View Container -->
+<div id="expanded-view" class="expanded-view" onclick="closeExpanded(event)">
+    <div class="expanded-content">
+        <span class="close-btn" onclick="closeExpanded(event)">✖</span>
+        <img id="expanded-img" class="expanded-img" src="" alt="">
+        <h2 id="expanded-title" class="expanded-title"></h2>
+        <p id="expanded-description" class="expanded-description"></p>
+
+        <!-- Quotes Section -->
+        <div class="expanded-quote-container">
+            <p id="expanded-quote" class="expanded-quote"></p>
+        </div>
+
+        <!-- Next Quote Button -->
+        <div class="quote-btn-container">
+            <button class="next-quote-btn" onclick="nextQuote()">Next Quote</button>
+        </div>
+    </div>
+</div>
