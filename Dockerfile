@@ -17,5 +17,5 @@ WORKDIR /app
 # Copy from build stage
 COPY --from=build /app/publish .
 
-# Set entry point
-ENTRYPOINT ["dotnet", "YourAppName.dll"]
+# Set entry point (CHANGED THIS LINE)
+ENTRYPOINT ["dotnet", "PhotoAlbum.dll"]
